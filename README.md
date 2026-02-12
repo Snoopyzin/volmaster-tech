@@ -227,8 +227,8 @@ Para qualquer dúvida ou problema:
 
 ---
 
-**Volmaster Tech © 2025** - Todos os direitos reservados
+**Volmaster Tech © 2026** - Todos os direitos reservados
 
 **Versão**: 2.0 - Carousel com 18 Produtos
-**Última Atualização**: 3 de Dezembro de 2025
+**Última Atualização**: 12 de fevereiro de 2026
 **Desenvolvido para**: Máxima Performance e Interatividade
