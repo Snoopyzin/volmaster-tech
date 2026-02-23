@@ -1,0 +1,429 @@
+<!-- DOCUMENTAÇÃO VISUAL DO PROJETO VOLMASTER TECH -->
+<!-- Abra este arquivo em um navegador para visualizar o sumário -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📊 Volmaster Tech - Sumário do Projeto</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0f0f1e 0%, #1f1f3a 100%);
+            color: #fff;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #FFD700;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #b8b8d0;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+        
+        h2 {
+            color: #FFD700;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #FFD700;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-box {
+            background: rgba(255, 215, 0, 0.08);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            color: #FFD700;
+            font-weight: 900;
+        }
+        
+        .stat-label {
+            color: #b8b8d0;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .feature {
+            background: rgba(255, 215, 0, 0.05);
+            border-left: 3px solid #FFD700;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .feature::before {
+            content: "✅ ";
+            color: #FFD700;
+            font-weight: bold;
+        }
+        
+        .products-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .product-item {
+            background: rgba(255, 215, 0, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            padding: 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .product-item:hover {
+            background: rgba(255, 215, 0, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+        }
+        
+        .product-number {
+            color: #FFD700;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        a.btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+            color: #000;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        a.btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+        }
+        
+        .footer {
+            text-align: center;
+            color: #b8b8d0;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
+        }
+        
+        .version {
+            color: #FFD700;
+            font-weight: bold;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        th {
+            background: rgba(255, 215, 0, 0.1);
+            color: #FFD700;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+            color: #b8b8d0;
+        }
+        
+        tr:hover {
+            background: rgba(255, 215, 0, 0.05);
+        }
+        
+        .highlight {
+            color: #FFD700;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 VOLMASTER TECH</h1>
+        <p class="subtitle">Plataforma de Diagnóstico e Otimização para Caminhões</p>
+        
+        <!-- ESTATÍSTICAS -->
+        <div class="section">
+            <h2>📊 Estatísticas do Projeto</h2>
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Produtos no Carousel</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Páginas Principais</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Página Índice</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">720</div>
+                    <div class="stat-label">Linhas CSS</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">105</div>
+                    <div class="stat-label">Linhas JS</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Imagens</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- PÁGINAS -->
+        <div class="section">
+            <h2>📄 Páginas do Projeto</h2>
+            <table>
+                <tr>
+                    <th>Página</th>
+                    <th>Arquivo</th>
+                    <th>Tamanho</th>
+                    <th>Descrição</th>
+                </tr>
+                <tr>
+                    <td><strong>🏠 Home</strong></td>
+                    <td><code>index.html</code></td>
+                    <td>14.8 KB</td>
+                    <td>Carousel com 12 produtos, navegação interativa</td>
+                </tr>
+                <tr>
+                    <td><strong>📦 Produtos</strong></td>
+                    <td><code>produtos.html</code></td>
+                    <td>11.1 KB</td>
+                    <td>Grid responsivo com 12 produtos, cards com hover</td>
+                </tr>
+                <tr>
+                    <td><strong>📞 Contatos</strong></td>
+                    <td><code>contatos.html</code></td>
+                    <td>4.6 KB</td>
+                    <td>Formulário funcional, informações e redes sociais</td>
+                </tr>
+                <tr>
+                    <td><strong>🚀 Índice</strong></td>
+                    <td><code>start.html</code></td>
+                    <td>4.4 KB</td>
+                    <td>Dashboard com acesso a todas as seções</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- FUNCIONALIDADES -->
+        <div class="section">
+            <h2>✨ Funcionalidades Principais</h2>
+            <div class="features">
+                <div class="feature">Carousel com 12 Slides</div>
+                <div class="feature">Navegação por Setas</div>
+                <div class="feature">Indicadores Dinâmicos</div>
+                <div class="feature">Auto-play (5seg)</div>
+                <div class="feature">Clique nos Dots</div>
+                <div class="feature">Numeração Visual</div>
+                <div class="feature">Hover Effects</div>
+                <div class="feature">Design Responsivo</div>
+                <div class="feature">Formulário Funcional</div>
+                <div class="feature">Grid de Produtos</div>
+                <div class="feature">Animações Suaves</div>
+                <div class="feature">Cores Amarelo/Preto</div>
+            </div>
+        </div>
+        
+        <!-- TODOS OS 12 PRODUTOS -->
+        <div class="section">
+            <h2>🎯 Todos os 12 Produtos</h2>
+            <div class="products-list">
+                <div class="product-item"><span class="product-number">01.</span>Motor D13K EURO 6</div>
+                <div class="product-item"><span class="product-number">02.</span>Motor D8K VM EURO 6</div>
+                <div class="product-item"><span class="product-number">03.</span>Diagnóstico FH4 EURO 6</div>
+                <div class="product-item"><span class="product-number">04.</span>Diagnóstico Avançado Volvo</div>
+                <div class="product-item"><span class="product-number">05.</span>Eletrônica FH Clássico</div>
+                <div class="product-item"><span class="product-number">06.</span>Eletrônica FH4 EURO 6</div>
+                <div class="product-item"><span class="product-number">07.</span>Eletrônica VM EURO 6</div>
+                <div class="product-item"><span class="product-number">08.</span>Eletrônica FH4 EURO 5</div>
+                <div class="product-item"><span class="product-number">09.</span>Caixa I-SHIFT F e G</div>
+                <div class="product-item"><span class="product-number">10.</span>Pós-tratamento Gases</div>
+                <div class="product-item"><span class="product-number">11.</span>Motor D13A e D13C</div>
+                <div class="product-item"><span class="product-number">12.</span>Winols - Edição Arquivos</div>
+            </div>
+        </div>
+        
+        <!-- TECNOLOGIAS -->
+        <div class="section">
+            <h2>💻 Tecnologias Utilizadas</h2>
+            <table>
+                <tr>
+                    <th>Tecnologia</th>
+                    <th>Uso</th>
+                </tr>
+                <tr>
+                    <td><span class="highlight">HTML5</span></td>
+                    <td>Estrutura semântica com 3 páginas principais + 1 página índice</td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">CSS3</span></td>
+                    <td>Grid, Flexbox, Animações keyframes, Media queries (720 linhas)</td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">JavaScript Vanilla</span></td>
+                    <td>Navegação carousel, geração dinâmica de dots (105 linhas)</td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">Google Fonts</span></td>
+                    <td>Montserrat (corpo) e Orbitron (títulos)</td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">JPEG</span></td>
+                    <td>18 imagens otimizadas dos produtos</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- PALETA DE CORES -->
+        <div class="section">
+            <h2>🎨 Paleta de Cores</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
+                <div style="background: #0f0f1e; border: 2px solid #FFD700; padding: 20px; border-radius: 10px; text-align: center;">
+                    <div style="color: #FFD700; font-weight: bold; margin-bottom: 5px;">#0f0f1e</div>
+                    <div style="color: #b8b8d0; font-size: 0.9rem;">Fundo Primário</div>
+                </div>
+                <div style="background: #1f1f3a; border: 2px solid #FFD700; padding: 20px; border-radius: 10px; text-align: center;">
+                    <div style="color: #FFD700; font-weight: bold; margin-bottom: 5px;">#1f1f3a</div>
+                    <div style="color: #b8b8d0; font-size: 0.9rem;">Fundo Secundário</div>
+                </div>
+                <div style="background: #FFD700; border: 2px solid #FFD700; padding: 20px; border-radius: 10px; text-align: center;">
+                    <div style="color: #000; font-weight: bold; margin-bottom: 5px;">#FFD700</div>
+                    <div style="color: #000; font-size: 0.9rem;">Amarelo Ouro</div>
+                </div>
+                <div style="background: #fff; border: 2px solid #FFD700; padding: 20px; border-radius: 10px; text-align: center;">
+                    <div style="color: #000; font-weight: bold; margin-bottom: 5px;">#ffffff</div>
+                    <div style="color: #000; font-size: 0.9rem;">Branco</div>
+                </div>
+                <div style="background: #b8b8d0; border: 2px solid #FFD700; padding: 20px; border-radius: 10px; text-align: center;">
+                    <div style="color: #000; font-weight: bold; margin-bottom: 5px;">#b8b8d0</div>
+                    <div style="color: #000; font-size: 0.9rem;">Cinza Claro</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- COMO USAR -->
+        <div class="section">
+            <h2>🚀 Como Usar o Projeto</h2>
+            <h3>Opção 1: Abrir Arquivo Local</h3>
+            <p style="color: #b8b8d0; margin-bottom: 15px;">
+                1. Navegue até: <code style="background: rgba(0,0,0,0.3); padding: 2px 8px; border-radius: 3px;">c:\Users\Techtool\Desktop\Nova pasta\new project\volmaster\</code><br>
+                2. Clique duplo em <code style="background: rgba(0,0,0,0.3); padding: 2px 8px; border-radius: 3px;">start.html</code><br>
+                3. Clique em "🏠 Home" para ver o carousel completo<br>
+            </p>
+            
+            <h3>Navegação no Carousel</h3>
+            <p style="color: #b8b8d0;">
+                ➡️ <strong>Setas</strong>: Clique em < ou > para navegar<br>
+                ⭐ <strong>Dots</strong>: Clique nos indicadores para ir ao slide<br>
+                ⏱️ <strong>Auto-play</strong>: Avança a cada 5 segundos<br>
+                🔢 <strong>Número</strong>: Veja qual slide está visualizando (01-12)
+            </p>
+        </div>
+        
+        <!-- ÚLTIMAS ATUALIZAÇÕES -->
+        <div class="section">
+            <h2>🔄 Últimas Atualizações</h2>
+            <div class="features">
+                <div class="feature">18 produtos no carousel</div>
+                <div class="feature">Geração dinâmica de dots</div>
+                <div class="feature">Suporte a múltiplos slides</div>
+                <div class="feature">Responsividade mobile</div>
+                <div class="feature">Scroll de indicadores</div>
+                <div class="feature">Página de índice</div>
+                <div class="feature">Footer em todas páginas</div>
+                <div class="feature">Animações suaves</div>
+                <div class="feature">Validação formulário</div>
+                <div class="feature">Layout grid responsivo</div>
+            </div>
+        </div>
+        
+        <!-- BOTÕES DE AÇÃO -->
+        <div class="buttons">
+            <a href="start.html" class="btn">🏠 Ir para Dashboard</a>
+            <a href="index.html" class="btn">🎠 Abrir Carousel</a>
+            <a href="produtos.html" class="btn">📦 Ver Produtos</a>
+            <a href="contatos.html" class="btn">📞 Contatos</a>
+        </div>
+        
+        <!-- FOOTER -->
+        <div class="footer">
+            <p><span class="version">Volmaster Tech v2.0</span> © 2026</p>
+            <p>Plataforma completa com carousel de 18 produtos e navegação interativa</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">Última atualização: 12 de fevereiro de 2026</p>
+        </div>
+    </div>
+</body>
+</html>
