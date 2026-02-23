@@ -2,11 +2,11 @@
 
 ## 📋 Descrição
 
-Volmaster Tech é um website moderno e interativo apresentando produtos e serviços de diagnóstico e otimização para caminhões. O projeto inclui uma página inicial com carousel de **18 produtos**, catálogo completo e página de contatos totalmente funcional.
+Volmaster Tech é um website moderno e interativo apresentando produtos e serviços de diagnóstico e otimização para caminhões. O projeto inclui uma página inicial com carousel de **20 produtos**, catálogo completo e página de contatos totalmente funcional.
 
 ## ✨ Características Principais
 
-- **Carousel com 18 Slides**: Exibe todos os produtos do projeto
+- **Carousel com 20 Slides**: Exibe todos os produtos do projeto
 - **Cores**: Preto/Branco/Amarelo (#FFD700) com efeitos de brilho
 - **Logo**: "Volmaster" em branco e "Tech" em amarelo
 - **Animações**: Transições suaves com efeitos de fade e slide
@@ -16,16 +16,16 @@ Volmaster Tech é um website moderno e interativo apresentando produtos e servi�
 ## 📄 Páginas Disponíveis
 
 ### 1. **Home (index.html)**
-✅ Carousel interativo com 18 produtos
+✅ Carousel interativo com 20 produtos
 ✅ Navegação com setas (anterior/próximo)
 ✅ Indicadores dinâmicos de slides (gerados automaticamente)
 ✅ Auto-play a cada 5 segundos
 ✅ Clique nos dots para ir direto ao slide desejado
 ✅ Design futurista com efeitos de partículas
-✅ Numeração do slide atual (01-18)
+✅ Numeração do slide atual (01-20)
 
 ### 2. **Produtos (produtos.html)**
-✅ Grid responsivo com todos os 18 produtos
+✅ Grid responsivo com todos os 20 produtos
 ✅ Cards com hover effects (escala, brilho, cor)
 ✅ Imagens de alta qualidade
 ✅ Descrição de cada produto
@@ -42,21 +42,21 @@ Volmaster Tech é um website moderno e interativo apresentando produtos e servi�
 
 ### 4. **Página de Índice (start.html)**
 ✅ Página inicial para acessar todas as seções
-✅ Lista de todos os 18 produtos
+✅ Lista de todos os 20 produtos
 ✅ Links de navegação rápida
 
 ## 📁 Estrutura de Arquivos
 
 ```
 volmaster/
-├── index.html           # Página inicial com carousel (18 slides)
+├── index.html           # Página inicial com carousel (20 slides)
 ├── produtos.html        # Catálogo de produtos com grid
 ├── contatos.html        # Página de contatos com formulário
 ├── start.html          # Página de índice/dashboard
 ├── styles.css          # Estilos globais (720 linhas)
 ├── scripts.js          # JavaScript funcional (105 linhas)
 ├── README.md           # Esta documentação
-└── volmaster/          # Pasta com 18 imagens dos produtos
+└── volmaster/          # Pasta com 20 imagens dos produtos
     ├── MOTOR D13K EURO 6.jpeg
     ├── Motor D8K VM VM EURO 6.jpeg
     ├── Diagnostico completo do FH4 EURO 6.jpeg
@@ -73,11 +73,13 @@ volmaster/
     ├── PARAMETROS AVANÃDOS VOLVO.jpeg
     ├── Moto D13A e D13C.jpeg
     ├── MOTOR SCANICA SUPER EURO 6.jpeg
+    ├── MOTOR SCANIA SUPER EURO6 16 A 19 DE JUNHO.jpg
+    ├── ELETRICIDADE E ELETRÔNICA DO FH CLÁSSICO.jpg
     ├── Winols.jpeg
     └── Winols Edição de Arquivos Scania S8.jpeg
 ```
 
-## 🎯 Todos os 18 Produtos
+## 🎯 Todos os 20 Produtos
 
 1. **Motor D13K EURO 6** - Motor Volvo
 2. **Motor D8K VM EURO 6** - Motor VM
@@ -97,6 +99,8 @@ volmaster/
 16. **Motor Scania SUPER EURO 6** - Motor Scania
 17. **Winols - Edição de Arquivos** - Software
 18. **Winols Scania S8** - Software Scania
+19. **Motor Scania Super EURO 6** - Curso completo de motor Scania
+20. **Eletricidade e Eletrônica do FH Clássico** - Treinamento elétrico FH
 
 ## 🎨 Paleta de Cores
 
@@ -114,7 +118,7 @@ volmaster/
 - Clique nos dots para ir direto ao slide
 - Auto-play a cada 5 segundos (pausa ao interagir)
 - Indicadores dinâmicos (gerados automaticamente)
-- Numeração visual (01-18)
+- Numeração visual (01-20)
 - Animações suaves de transição
 
 ✅ **Formulário de Contatos**
@@ -169,7 +173,7 @@ Depois acesse: `http://localhost:8000/volmaster/`
 - **Setas**: Clique em < ou > para navegar
 - **Dots**: Clique nos indicadores para ir direto ao slide
 - **Auto-play**: O carousel avança automaticamente a cada 5 segundos
-- **Número**: Veja qual slide você está visualizando (01-18)
+- **Número**: Veja qual slide você está visualizando (01-20)
 
 ## 💻 Tecnologias Utilizadas
 
@@ -194,9 +198,9 @@ Depois acesse: `http://localhost:8000/volmaster/`
   - Manipulação de eventos
   - Formulário de contatos
 
-## 🔄 Atualizações Realizadas (v2)
+## 🔄 Atualizações Realizadas (v3)
 
-✅ HTML completo com 18 produtos
+✅ HTML completo com 20 produtos
 ✅ JavaScript refatorado com geração dinâmica de dots
 ✅ Suporte para carousel com múltiplos slides
 ✅ Responsividade melhorada para mobile
@@ -229,6 +233,6 @@ Para qualquer dúvida ou problema:
 
 **Volmaster Tech © 2026** - Todos os direitos reservados
 
-**Versão**: 2.0 - Carousel com 18 Produtos
-**Última Atualização**: 12 de fevereiro de 2026
+**Versão**: 3.0 - Carousel com 20 Produtos
+**Última Atualização**: 23 de fevereiro de 2026
 **Desenvolvido para**: Máxima Performance e Interatividade
