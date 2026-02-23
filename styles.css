@@ -66,6 +66,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     z-index: 9999;
     background: rgba(15,15,30,0.45);
     backdrop-filter: blur(6px);
@@ -110,6 +111,45 @@ header nav ul li {
     cursor: pointer;
    position: relative;
    padding: 5px 0;
+}
+
+/* Social Media Links */
+.social-links {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.85);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #0f0f1e;
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+    border-color: #FFD700;
+}
+
+.social-icon svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover svg {
+    transform: scale(1.1);
 }
 
 header nav ul li::after {
@@ -837,6 +877,20 @@ footer {
         gap: 24px;
     }
 
+    .social-links {
+        gap: 12px;
+    }
+
+    .social-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .social-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
     .contact-form-section,
     .contact-info-section {
         padding: 20px;
@@ -885,6 +939,20 @@ footer {
         -webkit-overflow-scrolling: touch;
     }
 
+    .social-links {
+        gap: 8px;
+    }
+
+    .social-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .social-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+
     #dots-container {
         max-width: 280px;
         max-height: 70px;
@@ -916,4 +984,38 @@ footer {
     /* reduzir gap do nav para não sobrepor */
     header nav ul { gap: 10px; }
     header { padding: 10px 12px; }
+}
+
+/* Extra small devices */
+@media (max-width: 380px) {
+    .logo {
+        font-size: 1rem;
+    }
+
+    header nav ul {
+        gap: 8px;
+    }
+
+    header nav ul li a {
+        font-size: 0.85rem;
+    }
+
+    .social-links {
+        gap: 6px;
+    }
+
+    .social-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .social-icon svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    header {
+        padding: 8px 10px;
+        gap: 10px;
+    }
 }
