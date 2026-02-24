@@ -1,0 +1,2260 @@
+<!DOCTYPE html>
+<!-- saved from url=(0104)file:///C:/Users/Volmaster%20T.I/Desktop/projetos%20vscode/gest%C3%A3o%20oficina%20volmaster/index.html# -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#FDB915">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>VOLMASTER - Plataforma de Gestão de Oficina</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="./VOLMASTER - Plataforma de Gestão de Oficina_files/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./VOLMASTER - Plataforma de Gestão de Oficina_files/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./VOLMASTER - Plataforma de Gestão de Oficina_files/css2" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="./VOLMASTER - Plataforma de Gestão de Oficina_files/chart.js.baixados"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./VOLMASTER - Plataforma de Gestão de Oficina_files/style.css">
+<style id="toast-animations">
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes slideOut {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+        }
+    </style></head>
+<body class="" style="">
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h2 class="sidebar-title">Dashboard</h2>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li class="nav-item active" data-page="dashboard">
+                    <a href="file:///C:/Users/Volmaster%20T.I/Desktop/projetos%20vscode/gest%C3%A3o%20oficina%20volmaster/index.html#" class="nav-link">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="clientes">
+                    <a href="file:///C:/Users/Volmaster%20T.I/Desktop/projetos%20vscode/gest%C3%A3o%20oficina%20volmaster/index.html#" class="nav-link">
+                        <i class="fas fa-users"></i>
+                        <span>Clientes</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="veiculos">
+                    <a href="file:///C:/Users/Volmaster%20T.I/Desktop/projetos%20vscode/gest%C3%A3o%20oficina%20volmaster/index.html#" class="nav-link">
+                        <i class="fas fa-car"></i>
+                        <span>Veículos</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="ordens">
+                    <a href="file:///C:/Users/Volmaster%20T.I/Desktop/projetos%20vscode/gest%C3%A3o%20oficina%20volmaster/index.html#" class="nav-link">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>Ordens de Serviço</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="estoque">
+                    <a href="file:///C:/Users/Volmaster%20T.I/Desktop/projetos%20vscode/gest%C3%A3o%20oficina%20volmaster/index.html#" class="nav-link">
+                        <i class="fas fa-boxes"></i>
+                        <span>Estoque</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="financeiro">
+                    <a href="file:///C:/Users/Volmaster%20T.I/Desktop/projetos%20vscode/gest%C3%A3o%20oficina%20volmaster/index.html#" class="nav-link">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>Financeiro</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="relatorios">
+                    <a href="file:///C:/Users/Volmaster%20T.I/Desktop/projetos%20vscode/gest%C3%A3o%20oficina%20volmaster/index.html#" class="nav-link">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Relatórios</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="configuracoes">
+                    <a href="file:///C:/Users/Volmaster%20T.I/Desktop/projetos%20vscode/gest%C3%A3o%20oficina%20volmaster/index.html#" class="nav-link">
+                        <i class="fas fa-cog"></i>
+                        <span>Configurações</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="user-details">
+                    <span class="user-name">Administrador</span>
+                    <span class="user-role">Volmaster Auto</span>
+                </div>
+            </div>
+            <button class="btn-logout">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+        <!-- Header -->
+        <header class="top-header" style="box-shadow: none;">
+            <div class="header-left">
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="header-center">
+                <div class="header-brand-container">
+                    <img src="./VOLMASTER - Plataforma de Gestão de Oficina_files/logo volmaster branco.jpg" alt="VOLMASTER" class="header-logo">
+                    <h1 class="header-brand-name">VOLMASTER</h1>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar...">
+                </div>
+                <button class="btn-notification" onclick="toggleNotifications()">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge" id="notificationCount">0</span>
+                </button>
+                <div class="notifications-dropdown" id="notificationsDropdown">
+                    <div class="notifications-header">
+                        <h4>Notificações</h4>
+                        <button onclick="clearAllNotifications()" class="btn-clear-notifications">Limpar tudo</button>
+                    </div>
+                    <div class="notifications-list" id="notificationsList"><div class="notification-item" style="text-align: center; color: var(--text-gray);"><p>Nenhuma notificação</p></div></div>
+                    <div class="notifications-footer">
+                        <a href="file:///C:/Users/Volmaster%20T.I/Desktop/projetos%20vscode/gest%C3%A3o%20oficina%20volmaster/index.html#" onclick="viewAllNotifications()">Ver todas</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Page -->
+        <div class="page-content active" id="page-dashboard">
+            <!-- Gráfico de Desempenho no Topo -->
+            <div class="top-chart-section aos-animate" data-aos="fade-up">
+                <div class="section-header-simple">
+                    <h3><i class="fas fa-chart-area"></i> Desempenho Mensal</h3>
+                </div>
+                <div class="chart-card-top">
+                    <canvas id="topPerformanceChart" width="1428" height="350" style="display: block; box-sizing: border-box; height: 280px; width: 1142.4px;"></canvas>
+                </div>
+            </div>
+
+            <!-- KPIs Financeiros em Destaque -->
+            <div class="financial-kpis-section aos-animate" data-aos="fade-up">
+                <div class="section-header-simple">
+                    <h3><i class="fas fa-dollar-sign"></i> Indicadores Financeiros</h3>
+                </div>
+                <div class="financial-kpis-grid">
+                    <div class="stat-card-large featured">
+                        <div class="stat-icon-large yellow">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-info-large">
+                            <p class="stat-label-large">Faturamento Mensal</p>
+                            <h2 class="stat-number-large">R$ 89.750</h2>
+                            <div class="stat-progress-bar">
+                                <div class="stat-progress-fill" style="width: 94.5%"></div>
+                            </div>
+                            <div class="stat-footer-large">
+                                <span class="stat-meta-large">Meta: R$ 95.000</span>
+                                <span class="stat-trend positive"><i class="fas fa-arrow-up"></i> 23%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card-large">
+                        <div class="stat-icon-large purple">
+                            <i class="fas fa-receipt"></i>
+                        </div>
+                        <div class="stat-info-large">
+                            <p class="stat-label-large">Ticket Médio OS</p>
+                            <h2 class="stat-number-large">R$ 2.137</h2>
+                            <small class="stat-meta-large">42 OS neste mês</small>
+                            <div class="stat-footer-large">
+                                <span class="stat-meta-large">Último mês: R$ 1.810</span>
+                                <span class="stat-trend positive"><i class="fas fa-arrow-up"></i> 18%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card-large">
+                        <div class="stat-icon-large green">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <div class="stat-info-large">
+                            <p class="stat-label-large">Lucro Líquido</p>
+                            <h2 class="stat-number-large">R$ 57.300</h2>
+                            <small class="stat-meta-large">Margem de 63.8%</small>
+                            <div class="stat-footer-large">
+                                <span class="stat-meta-large">Receitas - Despesas</span>
+                                <span class="stat-trend positive"><i class="fas fa-arrow-up"></i> 28%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Cards Operacionais -->
+            <div class="stats-grid">
+                <div class="stat-card aos-animate" data-aos="fade-up" data-aos-delay="0">
+                    <div class="stat-icon blue">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-number">87%</h3>
+                        <p class="stat-label">Taxa de Ocupação</p>
+                        <small class="stat-meta">7 de 8 baias ocupadas</small>
+                    </div>
+                    <div class="stat-trend positive">
+                        <i class="fas fa-arrow-up"></i> 15%
+                    </div>
+                </div>
+
+                <div class="stat-card aos-animate" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-icon green">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-number">3.2h</h3>
+                        <p class="stat-label">Tempo Médio Atendimento</p>
+                        <small class="stat-meta">Meta: 4h</small>
+                    </div>
+                    <div class="stat-trend positive">
+                        <i class="fas fa-arrow-down"></i> 8%
+                    </div>
+                </div>
+
+                <div class="stat-card aos-animate" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-icon orange">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-number">248</h3>
+                        <p class="stat-label">Clientes Ativos</p>
+                        <small class="stat-meta">18 novos este mês</small>
+                    </div>
+                    <div class="stat-trend positive">
+                        <i class="fas fa-arrow-up"></i> 12%
+                    </div>
+                </div>
+
+                <div class="stat-card aos-animate" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-icon cyan">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-number">92%</h3>
+                        <p class="stat-label">Taxa de Retenção</p>
+                        <small class="stat-meta">Clientes recorrentes</small>
+                    </div>
+                    <div class="stat-trend positive">
+                        <i class="fas fa-arrow-up"></i> 5%
+                    </div>
+                </div>
+
+                <div class="stat-card aos-animate" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-icon pink">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-number">15</h3>
+                        <p class="stat-label">Agendamentos Hoje</p>
+                        <small class="stat-meta">3 confirmados</small>
+                    </div>
+                    <div class="stat-trend neutral">
+                        <i class="fas fa-minus"></i> 0%
+                    </div>
+                </div>
+
+                <div class="stat-card aos-animate" data-aos="fade-up" data-aos-delay="500">
+                    <div class="stat-icon red">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-number">4</h3>
+                        <p class="stat-label">Alertas Críticos</p>
+                        <small class="stat-meta">Requer atenção</small>
+                    </div>
+                    <div class="stat-trend negative">
+                        <i class="fas fa-arrow-up"></i> 2
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mecânicos da Equipe -->
+            <div class="mechanics-section aos-animate" data-aos="fade-up">
+                <div class="section-header-simple">
+                    <h3><i class="fas fa-users-cog"></i> Mecânicos em Atividade</h3>
+                    <button class="btn-manage-mechanics" onclick="showMechanicsManagement()">
+                        <i class="fas fa-edit"></i> Gerenciar Mecânicos
+                    </button>
+                </div>
+                <div class="mechanics-grid">
+                    <div class="mechanic-card aos-animate" data-aos="fade-up">
+                        <div class="mechanic-avatar-img">
+                            <img src="./VOLMASTER - Plataforma de Gestão de Oficina_files/Gabriel Mecanico.png" alt="Gabriel Alexandre">
+                        </div>
+                        <div class="mechanic-info">
+                            <h4 class="mechanic-name">Gabriel Alexandre</h4>
+                            <div class="mechanic-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-value">4.0</span>
+                            </div>
+                            <div class="mechanic-specialties">
+                                <span class="specialty-badge motor"><i class="fas fa-cog"></i> Motor</span>
+                                <span class="specialty-badge transmissao"><i class="fas fa-gears"></i> Transmissão</span>
+                            </div>
+                            <div class="mechanic-stats">
+                                <div class="stat-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>287 OS</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>1a 2m</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mechanic-card aos-animate" data-aos="fade-up" data-aos-delay="100">
+                        <div class="mechanic-avatar-img">
+                            <img src="./VOLMASTER - Plataforma de Gestão de Oficina_files/Matheus Mecanico.png" alt="Matheus Uai">
+                        </div>
+                        <div class="mechanic-info">
+                            <h4 class="mechanic-name">Matheus Uai</h4>
+                            <div class="mechanic-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-value">5.0</span>
+                            </div>
+                            <div class="mechanic-specialties">
+                                <span class="specialty-badge eletrica"><i class="fas fa-bolt"></i> Elétrica</span>
+                                <span class="specialty-badge diagnostico"><i class="fas fa-laptop-medical"></i> Diagnóstico</span>
+                            </div>
+                            <div class="mechanic-stats">
+                                <div class="stat-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>315 OS</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>4 anos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mechanic-card mechanic-legend aos-animate" data-aos="fade-up" data-aos-delay="200">
+                        <div class="mechanic-legend-badge">
+                            <i class="fas fa-crown"></i> LENDA
+                        </div>
+                        <div class="mechanic-avatar-img">
+                            <img src="./VOLMASTER - Plataforma de Gestão de Oficina_files/Jesuino Mecanico.png" alt="Jesuino Vieira">
+                        </div>
+                        <div class="mechanic-info">
+                            <h4 class="mechanic-name">Jesuino Vieira</h4>
+                            <p class="mechanic-description">"30 anos de empresa! Se ele não souber, ninguém sabe... Literalmente já consertou de tudo, até caminhão que andava de ré sozinho!"</p>
+                            <div class="mechanic-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-value">5.0</span>
+                            </div>
+                            <div class="mechanic-specialties">
+                                <span class="specialty-badge motor"><i class="fas fa-cog"></i> Motor</span>
+                                <span class="specialty-badge transmissao"><i class="fas fa-gears"></i> Transmissão</span>
+                                <span class="specialty-badge eletrica"><i class="fas fa-bolt"></i> Elétrica</span>
+                                <span class="specialty-badge hidraulica"><i class="fas fa-oil-can"></i> Tudo!</span>
+                            </div>
+                            <div class="mechanic-stats">
+                                <div class="stat-item">
+                                    <i class="fas fa-trophy"></i>
+                                    <span>2.847 OS</span>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-crown"></i>
+                                    <span>30 anos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serviços Disponíveis -->
+            <div class="services-available-section aos-animate" data-aos="fade-up">
+                <div class="section-header-simple">
+                    <h3><i class="fas fa-tools"></i> Serviços Disponíveis</h3>
+                </div>
+                <div class="services-available-grid">
+                    <div class="service-available-card aos-animate" data-aos="fade-up">
+                        <div class="service-icon yellow">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <h4 class="service-title">Manutenção de Motor</h4>
+                        <p class="service-description">Revisão completa, troca de óleo, filtros e inspeção detalhada</p>
+                        <div class="service-price">A partir de R$ 850</div>
+                        <div class="service-duration"><i class="fas fa-clock"></i> 4-6 horas</div>
+                    </div>
+
+                    <div class="service-available-card aos-animate" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon blue">
+                            <i class="fas fa-gears"></i>
+                        </div>
+                        <h4 class="service-title">Reparo de Transmissão</h4>
+                        <p class="service-description">Diagnóstico, conserto e substituição de componentes</p>
+                        <div class="service-price">A partir de R$ 1.200</div>
+                        <div class="service-duration"><i class="fas fa-clock"></i> 6-8 horas</div>
+                    </div>
+
+                    <div class="service-available-card aos-animate" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon green">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4 class="service-title">Sistema Elétrico</h4>
+                        <p class="service-description">Diagnóstico eletrônico, reparo de chicotes e sensores</p>
+                        <div class="service-price">A partir de R$ 450</div>
+                        <div class="service-duration"><i class="fas fa-clock"></i> 2-4 horas</div>
+                    </div>
+
+                    <div class="service-available-card aos-animate" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-icon red">
+                            <i class="fas fa-circle-stop"></i>
+                        </div>
+                        <h4 class="service-title">Sistema de Freios</h4>
+                        <p class="service-description">Troca de pastilhas, discos e revisão completa</p>
+                        <div class="service-price">A partir de R$ 680</div>
+                        <div class="service-duration"><i class="fas fa-clock"></i> 3-4 horas</div>
+                    </div>
+
+                    <div class="service-available-card aos-animate" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-icon purple">
+                            <i class="fas fa-car-side"></i>
+                        </div>
+                        <h4 class="service-title">Suspensão</h4>
+                        <p class="service-description">Alinhamento, balanceamento e troca de componentes</p>
+                        <div class="service-price">A partir de R$ 550</div>
+                        <div class="service-duration"><i class="fas fa-clock"></i> 2-3 horas</div>
+                    </div>
+
+                    <div class="service-available-card aos-animate" data-aos="fade-up" data-aos-delay="500">
+                        <div class="service-icon orange">
+                            <i class="fas fa-temperature-low"></i>
+                        </div>
+                        <h4 class="service-title">Sistema de Arrefecimento</h4>
+                        <p class="service-description">Limpeza, troca de fluidos e verificação de radiador</p>
+                        <div class="service-price">A partir de R$ 380</div>
+                        <div class="service-duration"><i class="fas fa-clock"></i> 2-3 horas</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Baias/Boxes da Oficina -->
+            <div class="workshop-bays-section aos-animate" data-aos="fade-up">
+                <div class="section-header">
+                    <h3><i class="fas fa-warehouse"></i> Status das Baias da Oficina</h3>
+                    <span class="live-indicator"><i class="fas fa-circle"></i> Atualização em Tempo Real</span>
+                </div>
+                <div class="bays-grid">
+                    <div class="bay-card occupied">
+                        <div class="bay-number">Baia 1</div>
+                        <div class="bay-status">OCUPADA</div>
+                        <div class="bay-info">
+                            <p><strong>OS #2401</strong></p>
+                            <p>Volvo FH 540 6x4</p>
+                            <p>Mecânico: Gabriel Alexandre</p>
+                            <div class="bay-progress">
+                                <div class="progress-bar" style="width: 65%"></div>
+                            </div>
+                            <small>Conclusão prevista: 17:30</small>
+                        </div>
+                    </div>
+
+                    <div class="bay-card occupied">
+                        <div class="bay-number">Baia 2</div>
+                        <div class="bay-status">OCUPADA</div>
+                        <div class="bay-info">
+                            <p><strong>OS #2403</strong></p>
+                            <p>Volvo FM 380 4x2</p>
+                            <p>Mecânico: Matheus Uai</p>
+                            <div class="bay-progress">
+                                <div class="progress-bar" style="width: 40%"></div>
+                            </div>
+                            <small>Aguardando peças</small>
+                        </div>
+                    </div>
+
+                    <div class="bay-card occupied">
+                        <div class="bay-number">Baia 3</div>
+                        <div class="bay-status">OCUPADA</div>
+                        <div class="bay-info">
+                            <p><strong>OS #2405</strong></p>
+                            <p>Volvo FH16 750 8x4</p>
+                            <p>Mecânico: Jesuino Vieira</p>
+                            <div class="bay-progress">
+                                <div class="progress-bar" style="width: 85%"></div>
+                            </div>
+                            <small>Conclusão prevista: 14:45</small>
+                        </div>
+                    </div>
+
+                    <div class="bay-card available">
+                        <div class="bay-number">Baia 4</div>
+                        <div class="bay-status">DISPONÍVEL</div>
+                        <div class="bay-info">
+                            <p>Pronta para uso</p>
+                            <button class="btn-assign">Atribuir OS</button>
+                        </div>
+                    </div>
+
+                    <div class="bay-card occupied">
+                        <div class="bay-number">Baia 5</div>
+                        <div class="bay-status">OCUPADA</div>
+                        <div class="bay-info">
+                            <p><strong>OS #2407</strong></p>
+                            <p>Volvo FH 460 6x2</p>
+                            <p>Mecânico: Gabriel Alexandre</p>
+                            <div class="bay-progress">
+                                <div class="progress-bar" style="width: 20%"></div>
+                            </div>
+                            <small>Início: 13:00</small>
+                        </div>
+                    </div>
+
+                    <div class="bay-card occupied">
+                        <div class="bay-number">Baia 6</div>
+                        <div class="bay-status">OCUPADA</div>
+                        <div class="bay-info">
+                            <p><strong>OS #2408</strong></p>
+                            <p>Volvo FMX 500 8x4</p>
+                            <p>Mecânico: Matheus Uai</p>
+                            <div class="bay-progress">
+                                <div class="progress-bar" style="width: 55%"></div>
+                            </div>
+                            <small>Conclusão prevista: 16:00</small>
+                        </div>
+                    </div>
+
+                    <div class="bay-card occupied">
+                        <div class="bay-number">Baia 7</div>
+                        <div class="bay-status">OCUPADA</div>
+                        <div class="bay-info">
+                            <p><strong>OS #2409</strong></p>
+                            <p>Volvo VM 330 6x4</p>
+                            <p>Mecânico: Jesuino Vieira</p>
+                            <div class="bay-progress">
+                                <div class="progress-bar" style="width: 75%"></div>
+                            </div>
+                            <small>Conclusão prevista: 15:30</small>
+                        </div>
+                    </div>
+
+                    <div class="bay-card maintenance">
+                        <div class="bay-number">Baia 8</div>
+                        <div class="bay-status">MANUTENÇÃO</div>
+                        <div class="bay-info">
+                            <p><i class="fas fa-tools"></i></p>
+                            <p>Em manutenção</p>
+                            <small>Retorno previsto: Amanhã</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serviços Especializados VOLVO -->
+            <div class="services-specialized aos-animate" data-aos="fade-up">
+                <div class="services-header">
+                    <div class="services-header-content">
+                        <div class="services-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="services-title">
+                            <h3>Serviços Especializados</h3>
+                            <p class="services-subtitle">Expertise exclusiva para caminhões VOLVO</p>
+                        </div>
+                    </div>
+                    <div class="services-badge-premium">
+                        <i class="fas fa-award"></i> Premium
+                    </div>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-image" style="background: url(&#39;https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=800&amp;h=600&amp;fit=crop&#39;) center/cover;">
+                            <div class="service-badge">VOLVO</div>
+                        </div>
+                        <div class="service-content">
+                            <h4><i class="fas fa-wrench"></i> Bronzinamento</h4>
+                            <p>Serviço especializado de bronzinamento de virabrequim e bielas para motores Volvo</p>
+                            <button class="btn-service">Solicitar Orçamento</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image" style="background: url(&#39;https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&amp;h=600&amp;fit=crop&#39;) center/cover;">
+                            <div class="service-badge">VOLVO</div>
+                        </div>
+                        <div class="service-content">
+                            <h4><i class="fas fa-cog"></i> Troca de Embreagem</h4>
+                            <p>Substituição completa de kit de embreagem original para caminhões Volvo</p>
+                            <button class="btn-service">Solicitar Orçamento</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image" style="background: url(&#39;https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&amp;h=600&amp;fit=crop&#39;) center/cover;">
+                            <div class="service-badge">VOLVO</div>
+                        </div>
+                        <div class="service-content">
+                            <h4><i class="fas fa-tint"></i> Troca de Injetores</h4>
+                            <p>Manutenção e substituição de injetores diesel com tecnologia Volvo</p>
+                            <button class="btn-service">Solicitar Orçamento</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image" style="background: url(&#39;https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&amp;h=600&amp;fit=crop&#39;) center/cover;">
+                            <div class="service-badge">VOLVO</div>
+                        </div>
+                        <div class="service-content">
+                            <h4><i class="fas fa-car-crash"></i> Troca de Kit do Motor</h4>
+                            <p>Revisão completa com kit motor original Volvo - pistões, anéis, bronzinas</p>
+                            <button class="btn-service">Solicitar Orçamento</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image" style="background: url(&#39;https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&amp;h=600&amp;fit=crop&#39;) center/cover;">
+                            <div class="service-badge">VOLVO</div>
+                        </div>
+                        <div class="service-content">
+                            <h4><i class="fas fa-gears"></i> Recondicionamento de Caixa</h4>
+                            <p>Recondicionamento total de caixa de câmbio com peças genuínas Volvo</p>
+                            <button class="btn-service">Solicitar Orçamento</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alertas Inteligentes e Agenda -->
+            <div class="dashboard-split aos-animate" data-aos="fade-up">
+                <!-- Alertas Inteligentes -->
+                <div class="alerts-panel">
+                    <div class="panel-header">
+                        <h3><i class="fas fa-bell"></i> Alertas e Notificações</h3>
+                        <span class="alert-count">4</span>
+                    </div>
+                    <div class="alerts-list">
+                        <div class="alert-item critical">
+                            <div class="alert-icon"><i class="fas fa-exclamation-circle"></i></div>
+                            <div class="alert-content">
+                                <h4>Estoque Crítico</h4>
+                                <p>Kit de Embreagem Volvo abaixo do mínimo</p>
+                                <small>2 horas atrás</small>
+                            </div>
+                            <button class="alert-action">Ver</button>
+                        </div>
+
+                        <div class="alert-item warning">
+                            <div class="alert-icon"><i class="fas fa-clock"></i></div>
+                            <div class="alert-content">
+                                <h4>OS #2403 Atrasada</h4>
+                                <p>Prazo de entrega ultrapassado em 1 dia</p>
+                                <small>5 horas atrás</small>
+                            </div>
+                            <button class="alert-action">Ver</button>
+                        </div>
+
+                        <div class="alert-item info">
+                            <div class="alert-icon"><i class="fas fa-calendar-alt"></i></div>
+                            <div class="alert-content">
+                                <h4>Revisão Programada</h4>
+                                <p>Volvo FH 540 - João Silva - 5.000km</p>
+                                <small>1 dia</small>
+                            </div>
+                            <button class="alert-action">Agendar</button>
+                        </div>
+
+                        <div class="alert-item success">
+                            <div class="alert-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="alert-content">
+                                <h4>Pagamento Recebido</h4>
+                                <p>OS #2402 - R$ 850,00 confirmado</p>
+                                <small>3 horas atrás</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mini Agenda -->
+                <div class="schedule-panel">
+                    <div class="panel-header">
+                        <h3><i class="fas fa-calendar-day"></i> Agenda de Hoje</h3>
+                        <button class="btn-link">Ver Completa</button>
+                    </div>
+                    <div class="schedule-timeline">
+                        <div class="timeline-item completed">
+                            <div class="timeline-time">08:00</div>
+                            <div class="timeline-content">
+                                <h4>Volvo FH 540 - Troca de Injetores</h4>
+                                <p>Maria Santos</p>
+                                <span class="badge badge-success"><i class="fas fa-check"></i> Concluído</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item in-progress">
+                            <div class="timeline-time">10:30</div>
+                            <div class="timeline-content">
+                                <h4>Volvo FH 540 - Manutenção</h4>
+                                <p>João Silva</p>
+                                <span class="badge badge-warning"><i class="fas fa-cog fa-spin"></i> Em andamento</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item upcoming">
+                            <div class="timeline-time">14:00</div>
+                            <div class="timeline-content">
+                                <h4>Volvo FMX 500 - Bronzinamento</h4>
+                                <p>Carlos Oliveira</p>
+                                <span class="badge badge-info">Agendado</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item upcoming">
+                            <div class="timeline-time">16:00</div>
+                            <div class="timeline-content">
+                                <h4>Volvo FM 380 - Freios</h4>
+                                <p>Pedro Costa</p>
+                                <span class="badge badge-info">Agendado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="charts-row">
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3>Faturamento Anual</h3>
+                        <select class="chart-filter">
+                            <option>2026</option>
+                            <option>2025</option>
+                        </select>
+                    </div>
+                    <div class="chart-placeholder">
+                        <canvas id="revenueChart" width="680" height="340" style="display: block; box-sizing: border-box; height: 272.2px; width: 544.4px;"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3>Serviços Mais Realizados</h3>
+                    </div>
+                    <div class="services-list">
+                        <div class="service-item">
+                            <span class="service-name">Troca de Óleo Volvo</span>
+                            <div class="service-bar">
+                                <div class="service-progress" style="width: 85%"></div>
+                            </div>
+                            <span class="service-value">85%</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Troca de Embreagem</span>
+                            <div class="service-bar">
+                                <div class="service-progress" style="width: 78%"></div>
+                            </div>
+                            <span class="service-value">78%</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Troca de Injetores</span>
+                            <div class="service-bar">
+                                <div class="service-progress" style="width: 72%"></div>
+                            </div>
+                            <span class="service-value">72%</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Bronzinamento</span>
+                            <div class="service-bar">
+                                <div class="service-progress" style="width: 68%"></div>
+                            </div>
+                            <span class="service-value">68%</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Troca de Kit Motor</span>
+                            <div class="service-bar">
+                                <div class="service-progress" style="width: 61%"></div>
+                            </div>
+                            <span class="service-value">61%</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Recondicionamento Caixa</span>
+                            <div class="service-bar">
+                                <div class="service-progress" style="width: 55%"></div>
+                            </div>
+                            <span class="service-value">55%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Orders Table -->
+            <div class="table-card">
+                <div class="card-header">
+                    <h3>Ordens de Serviço Recentes</h3>
+                    <button class="btn-primary btn-sm">Ver Todas</button>
+                </div>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>OS</th>
+                                <th>Cliente</th>
+                                <th>Veículo</th>
+                                <th>Serviço</th>
+                                <th>Status</th>
+                                <th>Valor</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#2401</td>
+                                <td>João Silva</td>
+                                <td>Volvo FH 540</td>
+                                <td>Manutenção Preventiva</td>
+                                <td><span class="badge badge-warning">Em Andamento</span></td>
+                                <td>R$ 2.500,00</td>
+                                <td>
+                                    <button class="btn-action"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-action"><i class="fas fa-edit"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#2402</td>
+                                <td>Maria Santos</td>
+                                <td>Scania R450</td>
+                                <td>Diagnóstico Eletrônico</td>
+                                <td><span class="badge badge-success">Concluída</span></td>
+                                <td>R$ 850,00</td>
+                                <td>
+                                    <button class="btn-action"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-action"><i class="fas fa-edit"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#2403</td>
+                                <td>Pedro Costa</td>
+                                <td>Volvo FM 380</td>
+                                <td>Troca de Freios</td>
+                                <td><span class="badge badge-info">Aguardando Peças</span></td>
+                                <td>R$ 3.200,00</td>
+                                <td>
+                                    <button class="btn-action"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-action"><i class="fas fa-edit"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clientes Page -->
+        <div class="page-content" id="page-clientes">
+            <div class="page-header">
+                <h2>Gestão de Clientes</h2>
+                <button class="btn-primary" onclick="openModalCliente()">
+                    <i class="fas fa-plus"></i> Novo Cliente
+                </button>
+            </div>
+
+            <div class="filter-bar">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchClientes" placeholder="Buscar cliente..." onkeyup="renderClientesTable(this.value)">
+                </div>
+                <select class="filter-select">
+                    <option>Todos os Status</option>
+                    <option>Ativos</option>
+                    <option>Inativos</option>
+                </select>
+            </div>
+
+            <div class="table-card">
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>CPF/CNPJ</th>
+                                <th>Telefone</th>
+                                <th>Email</th>
+                                <th>Veículos</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            <tr>
+                <td>#001</td>
+                <td>João Silva</td>
+                <td>123.456.789-00</td>
+                <td>(62) 98765-4321</td>
+                <td>joao@email.com</td>
+                <td>1</td>
+                <td><span class="badge badge-success">Ativo</span></td>
+                <td>
+                    <button class="btn-action" onclick="viewCliente(1)" title="Visualizar">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn-action" onclick="editCliente(1)" title="Editar">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-action" onclick="deleteCliente(1)" title="Excluir">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        
+            <tr>
+                <td>#002</td>
+                <td>Maria Santos</td>
+                <td>987.654.321-00</td>
+                <td>(62) 99876-5432</td>
+                <td>maria@email.com</td>
+                <td>1</td>
+                <td><span class="badge badge-success">Ativo</span></td>
+                <td>
+                    <button class="btn-action" onclick="viewCliente(2)" title="Visualizar">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn-action" onclick="editCliente(2)" title="Editar">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-action" onclick="deleteCliente(2)" title="Excluir">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Veículos Page -->
+        <div class="page-content" id="page-veiculos">
+            <div class="page-header">
+                <h2>Gestão de Veículos</h2>
+                <button class="btn-primary" onclick="openModalVeiculo()">
+                    <i class="fas fa-plus"></i> Novo Veículo
+                </button>
+            </div>
+
+            <div class="filter-bar">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchVeiculos" placeholder="Buscar veículo..." onkeyup="renderVeiculosTable(this.value)">
+                </div>
+                <select class="filter-select">
+                    <option>Todos os Status</option>
+                    <option>Ativos</option>
+                    <option>Inativos</option>
+                </select>
+            </div>
+
+            <div class="table-card">
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Cliente</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+                                <th>Placa</th>
+                                <th>Ano</th>
+                                <th>KM</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            <tr>
+                <td>#001</td>
+                <td>João Silva</td>
+                <td>Volvo</td>
+                <td>FH 540</td>
+                <td>ABC-1234</td>
+                <td>2020</td>
+                <td>125.000 km</td>
+                <td><span class="badge badge-success">Ativo</span></td>
+                <td>
+                    <button class="btn-action" onclick="viewVeiculo(1)" title="Visualizar">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn-action" onclick="editVeiculo(1)" title="Editar">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-action" onclick="deleteVeiculo(1)" title="Excluir">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        
+            <tr>
+                <td>#002</td>
+                <td>Maria Santos</td>
+                <td>Volvo</td>
+                <td>FM 380</td>
+                <td>DEF-5678</td>
+                <td>2019</td>
+                <td>98.000 km</td>
+                <td><span class="badge badge-success">Ativo</span></td>
+                <td>
+                    <button class="btn-action" onclick="viewVeiculo(2)" title="Visualizar">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn-action" onclick="editVeiculo(2)" title="Editar">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-action" onclick="deleteVeiculo(2)" title="Excluir">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ordens de Serviço Page -->
+        <div class="page-content" id="page-ordens">
+            <div class="page-header">
+                <h2>Ordens de Serviço</h2>
+                <button class="btn-primary" onclick="openModalOrdem()">
+                    <i class="fas fa-plus"></i> Nova Ordem
+                </button>
+            </div>
+
+            <div class="filter-bar">
+                <button class="filter-btn active">Todas</button>
+                <button class="filter-btn">Em Andamento</button>
+                <button class="filter-btn">Concluídas</button>
+                <button class="filter-btn">Aguardando Peças</button>
+                <button class="filter-btn">Canceladas</button>
+            </div>
+
+            <div class="os-grid">
+                <div class="os-card">
+                    <div class="os-header">
+                        <h3>OS #2401</h3>
+                        <span class="badge badge-warning">Em Andamento</span>
+                    </div>
+                    <div class="os-body">
+                        <p><strong>Cliente:</strong> João Silva</p>
+                        <p><strong>Veículo:</strong> Volvo FH 540 - ABC-1234</p>
+                        <p><strong>Serviço:</strong> Manutenção Preventiva</p>
+                        <p><strong>Mecânico:</strong> Carlos Souza</p>
+                        <p><strong>Prazo:</strong> 25/02/2026</p>
+                    </div>
+                    <div class="os-footer">
+                        <span class="os-value">R$ 2.500,00</span>
+                        <button class="btn-secondary btn-sm">Detalhes</button>
+                    </div>
+                </div>
+
+                <div class="os-card">
+                    <div class="os-header">
+                        <h3>OS #2402</h3>
+                        <span class="badge badge-success">Concluída</span>
+                    </div>
+                    <div class="os-body">
+                        <p><strong>Cliente:</strong> Maria Santos</p>
+                        <p><strong>Veículo:</strong> Scania R450 - XYZ-5678</p>
+                        <p><strong>Serviço:</strong> Diagnóstico Eletrônico</p>
+                        <p><strong>Mecânico:</strong> Ricardo Lima</p>
+                        <p><strong>Prazo:</strong> 22/02/2026</p>
+                    </div>
+                    <div class="os-footer">
+                        <span class="os-value">R$ 850,00</span>
+                        <button class="btn-secondary btn-sm">Detalhes</button>
+                    </div>
+                </div>
+
+                <div class="os-card">
+                    <div class="os-header">
+                        <h3>OS #2403</h3>
+                        <span class="badge badge-info">Aguardando Peças</span>
+                    </div>
+                    <div class="os-body">
+                        <p><strong>Cliente:</strong> Pedro Costa</p>
+                        <p><strong>Veículo:</strong> Volvo FM 380 - DEF-9012</p>
+                        <p><strong>Serviço:</strong> Troca de Freios</p>
+                        <p><strong>Mecânico:</strong> João Oliveira</p>
+                        <p><strong>Prazo:</strong> 28/02/2026</p>
+                    </div>
+                    <div class="os-footer">
+                        <span class="os-value">R$ 3.200,00</span>
+                        <button class="btn-secondary btn-sm">Detalhes</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal de Detalhes da OS -->
+            <div class="os-modal" id="osModal" style="display: none;">
+                <div class="os-modal-overlay" onclick="closeOSModal()"></div>
+                <div class="os-modal-content">
+                    <div class="os-modal-header">
+                        <div>
+                            <h2>Ordem de Serviço #2401</h2>
+                            <span class="badge badge-warning">Em Andamento</span>
+                        </div>
+                        <button class="btn-close" onclick="closeOSModal()"><i class="fas fa-times"></i></button>
+                    </div>
+
+                    <div class="os-modal-body">
+                        <!-- Tabs -->
+                        <div class="os-tabs">
+                            <button class="os-tab active" data-tab="info">Informações</button>
+                            <button class="os-tab" data-tab="checklist">Checklist</button>
+                            <button class="os-tab" data-tab="timeline">Timeline</button>
+                            <button class="os-tab" data-tab="financeiro">Financeiro</button>
+                        </div>
+
+                        <!-- Tab Content: Informações -->
+                        <div class="os-tab-content active" id="tab-info">
+                            <div class="os-info-grid">
+                                <div class="info-section">
+                                    <h4><i class="fas fa-user"></i> Cliente</h4>
+                                    <p><strong>Nome:</strong> João Silva</p>
+                                    <p><strong>CPF:</strong> 123.456.789-00</p>
+                                    <p><strong>Telefone:</strong> (62) 98765-4321</p>
+                                    <p><strong>Email:</strong> joao@email.com</p>
+                                </div>
+
+                                <div class="info-section">
+                                    <h4><i class="fas fa-truck"></i> Veículo</h4>
+                                    <p><strong>Modelo:</strong> Volvo FH 540</p>
+                                    <p><strong>Placa:</strong> ABC-1234</p>
+                                    <p><strong>Ano:</strong> 2020</p>
+                                    <p><strong>KM Atual:</strong> 185.450 km</p>
+                                </div>
+
+                                <div class="info-section">
+                                    <h4><i class="fas fa-tools"></i> Serviço</h4>
+                                    <p><strong>Tipo:</strong> Manutenção Preventiva</p>
+                                    <p><strong>Mecânico:</strong> Carlos Souza</p>
+                                    <p><strong>Baia:</strong> Baia 1</p>
+                                    <p><strong>Prioridade:</strong> <span class="badge badge-warning">Alta</span></p>
+                                </div>
+
+                                <div class="info-section">
+                                    <h4><i class="fas fa-calendar-alt"></i> Prazos</h4>
+                                    <p><strong>Entrada:</strong> 24/02/2026 08:00</p>
+                                    <p><strong>Previsão:</strong> 25/02/2026 17:00</p>
+                                    <p><strong>Tempo decorrido:</strong> 6h 30min</p>
+                                    <p><strong>Tempo estimado:</strong> 12h</p>
+                                </div>
+                            </div>
+
+                            <div class="info-section full-width">
+                                <h4><i class="fas fa-clipboard-list"></i> Descrição do Problema</h4>
+                                <p>Cliente relata ruídos no motor e perda de potência em subidas. Solicita manutenção preventiva completa com revisão de todos os sistemas críticos.</p>
+                            </div>
+                        </div>
+
+                        <!-- Tab Content: Checklist -->
+                        <div class="os-tab-content" id="tab-checklist">
+                            <div class="checklist-section">
+                                <h4><i class="fas fa-check-double"></i> Inspeção Veicular - Recepção</h4>
+                                <div class="checklist-grid">
+                                    <div class="checklist-item checked">
+                                        <input type="checkbox" checked="" id="check1">
+                                        <label for="check1">Nível de Óleo do Motor</label>
+                                        <span class="check-status"><i class="fas fa-check-circle"></i></span>
+                                    </div>
+                                    <div class="checklist-item checked">
+                                        <input type="checkbox" checked="" id="check2">
+                                        <label for="check2">Nível de Fluido de Arrefecimento</label>
+                                        <span class="check-status"><i class="fas fa-check-circle"></i></span>
+                                    </div>
+                                    <div class="checklist-item checked">
+                                        <input type="checkbox" checked="" id="check3">
+                                        <label for="check3">Estado dos Pneus</label>
+                                        <span class="check-status"><i class="fas fa-check-circle"></i></span>
+                                    </div>
+                                    <div class="checklist-item action-required">
+                                        <input type="checkbox" id="check4">
+                                        <label for="check4">Sistema de Freios</label>
+                                        <span class="check-status"><i class="fas fa-exclamation-triangle"></i> Requer Atenção</span>
+                                    </div>
+                                    <div class="checklist-item checked">
+                                        <input type="checkbox" checked="" id="check5">
+                                        <label for="check5">Luzes e Sinalização</label>
+                                        <span class="check-status"><i class="fas fa-check-circle"></i></span>
+                                    </div>
+                                    <div class="checklist-item checked">
+                                        <input type="checkbox" checked="" id="check6">
+                                        <label for="check6">Sistema de Suspensão</label>
+                                        <span class="check-status"><i class="fas fa-check-circle"></i></span>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <input type="checkbox" id="check7">
+                                        <label for="check7">Sistema Elétrico</label>
+                                        <span class="check-status pending">Pendente</span>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <input type="checkbox" id="check8">
+                                        <label for="check8">Sistema de Escape</label>
+                                        <span class="check-status pending">Pendente</span>
+                                    </div>
+                                </div>
+
+                                <h4 class="mt-4"><i class="fas fa-wrench"></i> Serviços Executados</h4>
+                                <div class="checklist-grid">
+                                    <div class="checklist-item checked">
+                                        <input type="checkbox" checked="" id="service1">
+                                        <label for="service1">Troca de Óleo e Filtro</label>
+                                        <span class="check-status"><i class="fas fa-check-circle"></i> Concluído</span>
+                                    </div>
+                                    <div class="checklist-item checked">
+                                        <input type="checkbox" checked="" id="service2">
+                                        <label for="service2">Revisão de Filtros (Ar/Combustível)</label>
+                                        <span class="check-status"><i class="fas fa-check-circle"></i> Concluído</span>
+                                    </div>
+                                    <div class="checklist-item in-progress">
+                                        <input type="checkbox" id="service3">
+                                        <label for="service3">Ajuste do Sistema de Freios</label>
+                                        <span class="check-status"><i class="fas fa-cog fa-spin"></i> Em Andamento</span>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <input type="checkbox" id="service4">
+                                        <label for="service4">Lubrificação Geral</label>
+                                        <span class="check-status pending">Aguardando</span>
+                                    </div>
+                                </div>
+
+                                <div class="checklist-notes">
+                                    <h5>Observações do Mecânico:</h5>
+                                    <textarea class="form-control" rows="3" placeholder="Adicionar observações...">Identificado desgaste nas pastilhas de freio dianteiras. Recomenda-se substituição nas próximas 5.000km.</textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab Content: Timeline -->
+                        <div class="os-tab-content" id="tab-timeline">
+                            <div class="os-timeline">
+                                <div class="timeline-event completed">
+                                    <div class="event-marker"><i class="fas fa-check"></i></div>
+                                    <div class="event-content">
+                                        <h5>OS Criada</h5>
+                                        <p>Ordem de serviço registrada no sistema</p>
+                                        <span class="event-time">24/02/2026 08:00 - Recepcionista: Ana Paula</span>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-event completed">
+                                    <div class="event-marker"><i class="fas fa-check"></i></div>
+                                    <div class="event-content">
+                                        <h5>Veículo Recepcionado</h5>
+                                        <p>Checklist de recepção completado</p>
+                                        <span class="event-time">24/02/2026 08:15 - Mecânico: Carlos Souza</span>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-event completed">
+                                    <div class="event-marker"><i class="fas fa-check"></i></div>
+                                    <div class="event-content">
+                                        <h5>Orçamento Aprovado</h5>
+                                        <p>Cliente aprovou orçamento de R$ 2.500,00</p>
+                                        <span class="event-time">24/02/2026 09:30 - Cliente: João Silva</span>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-event active">
+                                    <div class="event-marker"><i class="fas fa-cog fa-spin"></i></div>
+                                    <div class="event-content">
+                                        <h5>Serviço em Execução</h5>
+                                        <p>Manutenção preventiva em andamento - 65% concluído</p>
+                                        <div class="progress-bar-container">
+                                            <div class="progress-bar" style="width: 65%"></div>
+                                        </div>
+                                        <span class="event-time">24/02/2026 10:00 - Em andamento</span>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-event pending">
+                                    <div class="event-marker"><i class="fas fa-clock"></i></div>
+                                    <div class="event-content">
+                                        <h5>Teste Final</h5>
+                                        <p>Teste de pista e validação dos serviços</p>
+                                        <span class="event-time">Pendente</span>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-event pending">
+                                    <div class="event-marker"><i class="fas fa-clock"></i></div>
+                                    <div class="event-content">
+                                        <h5>Veículo Liberado</h5>
+                                        <p>Veículo pronto para entrega</p>
+                                        <span class="event-time">Pendente</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab Content: Financeiro -->
+                        <div class="os-tab-content" id="tab-financeiro">
+                            <div class="financial-details">
+                                <div class="financial-summary-box">
+                                    <h4>Resumo Financeiro</h4>
+                                    <div class="summary-line">
+                                        <span>Mão de Obra:</span>
+                                        <strong>R$ 800,00</strong>
+                                    </div>
+                                    <div class="summary-line">
+                                        <span>Peças e Materiais:</span>
+                                        <strong>R$ 1.450,00</strong>
+                                    </div>
+                                    <div class="summary-line">
+                                        <span>Subtotal:</span>
+                                        <strong>R$ 2.250,00</strong>
+                                    </div>
+                                    <div class="summary-line">
+                                        <span>Desconto (10%):</span>
+                                        <strong class="text-success">- R$ 225,00</strong>
+                                    </div>
+                                    <div class="summary-line">
+                                        <span>Impostos:</span>
+                                        <strong>R$ 475,00</strong>
+                                    </div>
+                                    <div class="summary-line total">
+                                        <span>Total:</span>
+                                        <strong>R$ 2.500,00</strong>
+                                    </div>
+                                </div>
+
+                                <div class="parts-table">
+                                    <h4>Peças Utilizadas</h4>
+                                    <table class="data-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Código</th>
+                                                <th>Descrição</th>
+                                                <th>Qtd</th>
+                                                <th>Unitário</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+            <tr>
+                <td>#2401</td>
+                <td>João Silva</td>
+                <td>Volvo FH 540</td>
+                <td>Gabriel Alexandre</td>
+                <td>Manutenção Preventiva</td>
+                <td><span class="badge badge-warning">Em Andamento</span></td>
+                <td>R$&nbsp;2.500,00</td>
+                <td>
+                    <button class="btn-action" onclick="viewOrdem(2401)" title="Visualizar">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn-action" onclick="editOrdem(2401)" title="Editar">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-action" onclick="deleteOrdem(2401)" title="Excluir">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        
+            <tr>
+                <td>#2402</td>
+                <td>Maria Santos</td>
+                <td>Volvo FM 380</td>
+                <td>Matheus Uai</td>
+                <td>Diagnóstico Eletrônico</td>
+                <td><span class="badge badge-success">Concluída</span></td>
+                <td>R$&nbsp;850,00</td>
+                <td>
+                    <button class="btn-action" onclick="viewOrdem(2402)" title="Visualizar">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn-action" onclick="editOrdem(2402)" title="Editar">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-action" onclick="deleteOrdem(2402)" title="Excluir">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="payment-info">
+                                    <h4>Forma de Pagamento</h4>
+                                    <select class="form-control">
+                                        <option>Selecione...</option>
+                                        <option>Dinheiro</option>
+                                        <option>Cartão de Crédito</option>
+                                        <option>Cartão de Débito</option>
+                                        <option>PIX</option>
+                                        <option>Boleto</option>
+                                        <option>Cheque</option>
+                                    </select>
+                                    <button class="btn-primary mt-3">Registrar Pagamento</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="os-modal-footer">
+                        <button class="btn-secondary" onclick="closeOSModal()">Fechar</button>
+                        <button class="btn-primary"><i class="fas fa-print"></i> Imprimir OS</button>
+                        <button class="btn-primary"><i class="fas fa-save"></i> Salvar Alterações</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Estoque Page -->
+        <div class="page-content" id="page-estoque">
+            <div class="page-header">
+                <h2>Controle de Estoque</h2>
+                <button class="btn-primary" onclick="openModalEstoque()">
+                    <i class="fas fa-plus"></i> Novo Item
+                </button>
+            </div>
+
+            <div class="stats-grid mb-4">
+                <div class="stat-card-small">
+                    <i class="fas fa-boxes"></i>
+                    <div>
+                        <h4>156</h4>
+                        <p>Total de Itens</p>
+                    </div>
+                </div>
+                <div class="stat-card-small">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div>
+                        <h4>12</h4>
+                        <p>Estoque Baixo</p>
+                    </div>
+                </div>
+                <div class="stat-card-small">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <h4>R$ 45.320</h4>
+                        <p>Valor em Estoque</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-card">
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Descrição</th>
+                                <th>Categoria</th>
+                                <th>Quantidade</th>
+                                <th>Valor Unitário</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            <tr>
+                <td>FLT-001</td>
+                <td>Filtro de Óleo Volvo</td>
+                <td>Filtros</td>
+                <td>25</td>
+                <td>10</td>
+                <td><span class="badge badge-success">Normal</span></td>
+                <td>R$&nbsp;2.125,00</td>
+                <td>
+                    <button class="btn-action" onclick="viewEstoque(1)" title="Visualizar">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn-action" onclick="editEstoque(1)" title="Editar">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-action" onclick="deleteEstoque(1)" title="Excluir">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        
+            <tr>
+                <td>OLE-001</td>
+                <td>Óleo Motor 15W40</td>
+                <td>Lubrificantes</td>
+                <td>120</td>
+                <td>50</td>
+                <td><span class="badge badge-success">Normal</span></td>
+                <td>R$&nbsp;5.400,00</td>
+                <td>
+                    <button class="btn-action" onclick="viewEstoque(2)" title="Visualizar">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="btn-action" onclick="editEstoque(2)" title="Editar">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-action" onclick="deleteEstoque(2)" title="Excluir">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Financeiro Page -->
+        <div class="page-content" id="page-financeiro">
+            <div class="page-header">
+                <h2>Gestão Financeira</h2>
+                <button class="btn-primary" onclick="openModalFinanceiro()">
+                    <i class="fas fa-plus"></i> Novo Lançamento
+                </button>
+            </div>
+
+            <div class="financial-summary">
+                <div class="financial-card receitas">
+                    <i class="fas fa-arrow-up"></i>
+                    <div>
+                        <p>Receitas do Mês</p>
+                        <h3 id="totalReceitas">R$&nbsp;850,00</h3>
+                    </div>
+                </div>
+                <div class="financial-card despesas">
+                    <i class="fas fa-arrow-down"></i>
+                    <div>
+                        <p>Despesas do Mês</p>
+                        <h3 id="totalDespesas">R$&nbsp;3.500,00</h3>
+                    </div>
+                </div>
+                <div class="financial-card saldo">
+                    <i class="fas fa-dollar-sign"></i>
+                    <div>
+                        <p>Saldo do Mês</p>
+                        <h3 id="saldoMensal" class="text-danger">-R$&nbsp;2.650,00</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-card">
+                <div class="card-header">
+                    <h3>Lançamentos Recentes</h3>
+                    <select class="chart-filter">
+                        <option>Fevereiro 2026</option>
+                        <option>Janeiro 2026</option>
+                    </select>
+                </div>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Descrição</th>
+                                <th>Categoria</th>
+                                <th>Tipo</th>
+                                <th>Valor</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            <tr>
+                <td>24/02/2026</td>
+                <td><span class="text-success">Receita</span></td>
+                <td>OS #2402 - Diagnóstico Eletrônico</td>
+                <td>Serviços</td>
+                <td class="text-success">R$&nbsp;850,00</td>
+                <td><span class="badge badge-success">Recebido</span></td>
+                <td>
+                    <button class="btn-action" onclick="editFinanceiro(1)" title="Editar">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-action" onclick="deleteFinanceiro(1)" title="Excluir">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        
+            <tr>
+                <td>22/02/2026</td>
+                <td><span class="text-danger">Despesa</span></td>
+                <td>Compra de peças - Fornecedor Volvo</td>
+                <td>Peças</td>
+                <td class="text-danger">R$&nbsp;3.500,00</td>
+                <td><span class="badge badge-success">Pago</span></td>
+                <td>
+                    <button class="btn-action" onclick="editFinanceiro(2)" title="Editar">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-action" onclick="deleteFinanceiro(2)" title="Excluir">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Relatórios Page -->
+        <div class="page-content" id="page-relatorios">
+            <div class="page-header">
+                <h2>Relatórios e Análises</h2>
+            </div>
+
+            <div class="reports-grid">
+                <div class="report-card">
+                    <i class="fas fa-file-chart-line"></i>
+                    <h3>Relatório de Faturamento</h3>
+                    <p>Análise completa do faturamento mensal e anual</p>
+                    <button class="btn-secondary" onclick="alert(&#39;Gerando relatório...&#39;)">Gerar Relatório</button>
+                </div>
+
+                <div class="report-card">
+                    <i class="fas fa-users-cog"></i>
+                    <h3>Relatório de Clientes</h3>
+                    <p>Visão geral da base de clientes e histórico</p>
+                    <button class="btn-secondary" onclick="alert(&#39;Gerando relatório...&#39;)">Gerar Relatório</button>
+                </div>
+
+                <div class="report-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Relatório de Serviços</h3>
+                    <p>Serviços mais realizados e tempo médio</p>
+                    <button class="btn-secondary" onclick="alert(&#39;Gerando relatório...&#39;)">Gerar Relatório</button>
+                </div>
+
+                <div class="report-card">
+                    <i class="fas fa-box-open"></i>
+                    <h3>Relatório de Estoque</h3>
+                    <p>Movimentação e valor do estoque</p>
+                    <button class="btn-secondary" onclick="alert(&#39;Gerando relatório...&#39;)">Gerar Relatório</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Configurações Page -->
+        <div class="page-content" id="page-configuracoes">
+            <div class="page-header">
+                <h2>Configurações do Sistema</h2>
+            </div>
+
+            <div class="settings-grid">
+                <div class="settings-card">
+                    <h3><i class="fas fa-user-cog"></i> Dados da Oficina</h3>
+                    <form class="settings-form" onsubmit="event.preventDefault(); alert(&#39;Configurações salvas!&#39;);">
+                        <div class="form-group">
+                            <label>Nome da Oficina</label>
+                            <input type="text" class="form-control" value="Volmaster Auto">
+                        </div>
+                        <div class="form-group">
+                            <label>CNPJ</label>
+                            <input type="text" class="form-control" value="12.345.678/0001-00">
+                        </div>
+                        <div class="form-group">
+                            <label>Telefone</label>
+                            <input type="text" class="form-control" value="(62) 3290-0519">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control" value="contato@volmaster.com.br">
+                        </div>
+                        <button type="submit" class="btn-primary">Salvar Alterações</button>
+                    </form>
+                </div>
+
+                <div class="settings-card">
+                    <h3><i class="fas fa-bell"></i> Notificações</h3>
+                    <div class="settings-toggle">
+                        <label>Email sobre novas OS</label>
+                        <input type="checkbox" checked="">
+                    </div>
+                    <div class="settings-toggle">
+                        <label>Alerta de estoque baixo</label>
+                        <input type="checkbox" checked="">
+                    </div>
+                    <div class="settings-toggle">
+                        <label>Lembrete de pagamentos</label>
+                        <input type="checkbox">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de Gerenciamento de Mecânicos -->
+    <div class="modal fade" id="mechanicsManagementModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header" style="border-bottom: 2px solid var(--primary-yellow);">
+                    <h5 class="modal-title"><i class="fas fa-users-cog"></i> Gerenciar Mecânicos</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <!-- Formulário de Adicionar/Editar Mecânico -->
+                    <div class="mechanic-form-section mb-4">
+                        <h6 class="mb-3" style="color: var(--primary-yellow);"><i class="fas fa-plus-circle"></i> Adicionar Novo Mecânico</h6>
+                        <form id="mechanicForm">
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label class="form-label">Nome Completo</label>
+                                    <input type="text" class="form-control bg-dark text-white" id="mechanicName" placeholder="Ex: Gabriel Alexandre" required="">
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Especialidade Principal</label>
+                                    <select class="form-control bg-dark text-white" id="mechanicSpecialty">
+                                        <option value="motor">Motor</option>
+                                        <option value="transmissao">Transmissão</option>
+                                        <option value="eletrica">Elétrica</option>
+                                        <option value="diagnostico">Diagnóstico</option>
+                                        <option value="suspensao">Suspensão</option>
+                                        <option value="freios">Freios</option>
+                                        <option value="hidraulica">Hidráulica</option>
+                                        <option value="arrefecimento">Arrefecimento</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Anos de Experiência</label>
+                                    <input type="number" class="form-control bg-dark text-white" id="mechanicYears" placeholder="Ex: 5" min="0" max="50" required="">
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Foto do Mecânico</label>
+                                    <input type="file" class="form-control bg-dark text-white" id="mechanicPhoto" accept="image/*">
+                                    <small class="text-muted">Coloque a foto na pasta "imagens" com o nome: "Nome Mecanico.png"</small>
+                                </div>
+                                <div class="col-md-12 text-end">
+                                    <button type="submit" class="btn btn-warning">
+                                        <i class="fas fa-save"></i> Salvar Mecânico
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <hr style="border-color: var(--border-color);">
+
+                    <!-- Lista de Mecânicos Atuais -->
+                    <div class="mechanics-list-section">
+                        <h6 class="mb-3" style="color: var(--primary-yellow);"><i class="fas fa-list"></i> Mecânicos Cadastrados</h6>
+                        <div class="table-responsive">
+                            <table class="table table-dark table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Foto</th>
+                                        <th>Nome</th>
+                                        <th>Especialidades</th>
+                                        <th>Avaliação</th>
+                                        <th>OS Completas</th>
+                                        <th>Experiência</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="mechanicsTableBody">
+                                    <tr>
+                                        <td><img src="./VOLMASTER - Plataforma de Gestão de Oficina_files/Gabriel Mecanico.png" alt="Gabriel" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;"></td>
+                                        <td>Gabriel Alexandre</td>
+                                        <td>
+                                            <span class="badge bg-warning text-dark">Motor</span>
+                                            <span class="badge bg-info">Transmissão</span>
+                                        </td>
+                                        <td>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="far fa-star text-muted"></i>
+                                            4.0
+                                        </td>
+                                        <td>287 OS</td>
+                                        <td>1 ano e 2 meses</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-warning" onclick="editMechanic(&#39;gabriel&#39;)">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger" onclick="deleteMechanic(&#39;gabriel&#39;)">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="./VOLMASTER - Plataforma de Gestão de Oficina_files/Matheus Mecanico.png" alt="Matheus" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;"></td>
+                                        <td>Matheus Uai</td>
+                                        <td>
+                                            <span class="badge bg-success">Elétrica</span>
+                                            <span class="badge bg-purple">Diagnóstico</span>
+                                        </td>
+                                        <td>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            5.0
+                                        </td>
+                                        <td>315 OS</td>
+                                        <td>4 anos</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-warning" onclick="editMechanic(&#39;matheus&#39;)">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger" onclick="deleteMechanic(&#39;matheus&#39;)">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="table-warning">
+                                        <td><img src="./VOLMASTER - Plataforma de Gestão de Oficina_files/Jesuino Mecanico.png" alt="Jesuino" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;"></td>
+                                        <td><strong>Jesuino Vieira</strong> <span class="badge bg-warning text-dark"><i class="fas fa-crown"></i> LENDA</span></td>
+                                        <td>
+                                            <span class="badge bg-warning text-dark">Motor</span>
+                                            <span class="badge bg-info">Transmissão</span>
+                                            <span class="badge bg-success">Elétrica</span>
+                                            <span class="badge bg-danger">Tudo!</span>
+                                        </td>
+                                        <td>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            5.0
+                                        </td>
+                                        <td>2.847 OS</td>
+                                        <td>30 anos <i class="fas fa-trophy text-warning"></i></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-warning" onclick="editMechanic(&#39;jesuino&#39;)">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-danger" disabled="" title="Lenda não pode ser removida!">
+                                                <i class="fas fa-shield-alt"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border-top: 2px solid var(--primary-yellow);">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Clientes -->
+    <div class="modal fade" id="modalCliente" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header" style="border-bottom: 2px solid var(--primary-yellow);">
+                    <h5 class="modal-title"><i class="fas fa-user-plus"></i> <span id="modalClienteTitulo">Novo Cliente</span></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="formCliente">
+                        <input type="hidden" id="clienteId">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Nome Completo *</label>
+                                <input type="text" class="form-control bg-dark text-white" id="clienteNome" required="">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">CPF/CNPJ *</label>
+                                <input type="text" class="form-control bg-dark text-white" id="clienteCpfCnpj" required="">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Telefone *</label>
+                                <input type="tel" class="form-control bg-dark text-white" id="clienteTelefone" placeholder="(62) 98765-4321" required="">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control bg-dark text-white" id="clienteEmail">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label">Endereço</label>
+                                <input type="text" class="form-control bg-dark text-white" id="clienteEndereco">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Cidade</label>
+                                <input type="text" class="form-control bg-dark text-white" id="clienteCidade">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Estado</label>
+                                <select class="form-control bg-dark text-white" id="clienteEstado">
+                                    <option value="">Selecione...</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-end">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-warning">
+                                <i class="fas fa-save"></i> Salvar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Veículos -->
+    <div class="modal fade" id="modalVeiculo" tabindex="-1" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header" style="border-bottom: 2px solid var(--primary-yellow);">
+                    <h5 class="modal-title"><i class="fas fa-truck"></i> <span id="modalVeiculoTitulo">Editar Veículo</span></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="formVeiculo">
+                        <input type="hidden" id="veiculoId" value="1">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Cliente *</label>
+                                <select class="form-control bg-dark text-white" id="veiculoCliente" required=""><option value="">Selecione o cliente...</option><option value="1">João Silva</option><option value="2">Maria Santos</option></select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Marca *</label>
+                                <select class="form-control bg-dark text-white" id="veiculoMarca" required="">
+                                    <option value="">Selecione...</option>
+                                    <option value="Volvo">Volvo</option>
+                                    <option value="Scania">Scania</option>
+                                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                                    <option value="DAF">DAF</option>
+                                    <option value="MAN">MAN</option>
+                                    <option value="Iveco">Iveco</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Modelo *</label>
+                                <input type="text" class="form-control bg-dark text-white" id="veiculoModelo" placeholder="Ex: FH 540" required="">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Placa *</label>
+                                <input type="text" class="form-control bg-dark text-white" id="veiculoPlaca" placeholder="ABC-1234" required="">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Ano *</label>
+                                <input type="number" class="form-control bg-dark text-white" id="veiculoAno" min="1990" max="2026" required="">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Chassi</label>
+                                <input type="text" class="form-control bg-dark text-white" id="veiculoChassi">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">KM Atual</label>
+                                <input type="number" class="form-control bg-dark text-white" id="veiculoKm" min="0">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Cor</label>
+                                <input type="text" class="form-control bg-dark text-white" id="veiculoCor">
+                            </div>
+                        </div>
+                        <div class="mt-4 text-end">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-warning">
+                                <i class="fas fa-save"></i> Salvar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Ordem de Serviço -->
+    <div class="modal fade" id="modalOrdem" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header" style="border-bottom: 2px solid var(--primary-yellow);">
+                    <h5 class="modal-title"><i class="fas fa-wrench"></i> <span id="modalOrdemTitulo">Nova Ordem de Serviço</span></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="formOrdem">
+                        <input type="hidden" id="ordemId">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label">Cliente *</label>
+                                <select class="form-control bg-dark text-white" id="ordemCliente" required=""><option value="">Selecione o cliente...</option><option value="1">João Silva</option><option value="2">Maria Santos</option></select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Veículo *</label>
+                                <select class="form-control bg-dark text-white" id="ordemVeiculo" required="" disabled="">
+                                    <option value="">Selecione o cliente primeiro...</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Mecânico *</label>
+                                <select class="form-control bg-dark text-white" id="ordemMecanico" required="">
+                                    <option value="">Selecione o mecânico...</option>
+                                </select>
+                            </div>
+                            <div class="col-md-8">
+                                <label class="form-label">Serviço/Tipo *</label>
+                                <input type="text" class="form-control bg-dark text-white" id="ordemServico" placeholder="Ex: Manutenção Preventiva" required="">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Valor (R$) *</label>
+                                <input type="number" class="form-control bg-dark text-white" id="ordemValor" step="0.01" min="0" required="">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label">Descrição do Serviço</label>
+                                <textarea class="form-control bg-dark text-white" id="ordemDescricao" rows="3" placeholder="Descreva os serviços a serem realizados..."></textarea>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Data de Previsão</label>
+                                <input type="date" class="form-control bg-dark text-white" id="ordemPrevisao">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Status</label>
+                                <select class="form-control bg-dark text-white" id="ordemStatus">
+                                    <option value="Em Andamento">Em Andamento</option>
+                                    <option value="Aguardando Peças">Aguardando Peças</option>
+                                    <option value="Concluída">Concluída</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-end">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-warning">
+                                <i class="fas fa-save"></i> Salvar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Estoque -->
+    <div class="modal fade" id="modalEstoque" tabindex="-1" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header" style="border-bottom: 2px solid var(--primary-yellow);">
+                    <h5 class="modal-title"><i class="fas fa-box"></i> <span id="modalEstoqueTitulo">Novo Item de Estoque</span></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="formEstoque">
+                        <input type="hidden" id="estoqueId" value="">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Código *</label>
+                                <input type="text" class="form-control bg-dark text-white" id="estoqueCodigo" placeholder="Ex: FLT-001" required="">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Categoria *</label>
+                                <select class="form-control bg-dark text-white" id="estoqueCategoria" required="">
+                                    <option value="">Selecione...</option>
+                                    <option value="Filtros">Filtros</option>
+                                    <option value="Lubrificantes">Lubrificantes</option>
+                                    <option value="Peças Motor">Peças Motor</option>
+                                    <option value="Peças Transmissão">Peças Transmissão</option>
+                                    <option value="Sistema Elétrico">Sistema Elétrico</option>
+                                    <option value="Freios">Freios</option>
+                                    <option value="Suspensão">Suspensão</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label">Nome do Produto *</label>
+                                <input type="text" class="form-control bg-dark text-white" id="estoqueNome" required="">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Quantidade *</label>
+                                <input type="number" class="form-control bg-dark text-white" id="estoqueQuantidade" min="0" required="">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Quantidade Mínima *</label>
+                                <input type="number" class="form-control bg-dark text-white" id="estoqueQuantidadeMinima" min="0" required="">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Valor Unitário (R$) *</label>
+                                <input type="number" class="form-control bg-dark text-white" id="estoqueValor" step="0.01" min="0" required="">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Fornecedor</label>
+                                <input type="text" class="form-control bg-dark text-white" id="estoqueFornecedor">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Localização</label>
+                                <input type="text" class="form-control bg-dark text-white" id="estoqueLocalizacao" placeholder="Ex: Prateleira A1">
+                            </div>
+                        </div>
+                        <div class="mt-4 text-end">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-warning">
+                                <i class="fas fa-save"></i> Salvar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Financeiro -->
+    <div class="modal fade" id="modalFinanceiro" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header" style="border-bottom: 2px solid var(--primary-yellow);">
+                    <h5 class="modal-title"><i class="fas fa-dollar-sign"></i> <span id="modalFinanceiroTitulo">Novo Lançamento</span></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="formFinanceiro">
+                        <input type="hidden" id="financeiroId">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Tipo *</label>
+                                <select class="form-control bg-dark text-white" id="financeiroTipo" required="">
+                                    <option value="">Selecione...</option>
+                                    <option value="Receita">Receita</option>
+                                    <option value="Despesa">Despesa</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Categoria *</label>
+                                <select class="form-control bg-dark text-white" id="financeiroCategoria" required="">
+                                    <option value="">Selecione...</option>
+                                    <option value="Serviços">Serviços</option>
+                                    <option value="Peças">Peças</option>
+                                    <option value="Salários">Salários</option>
+                                    <option value="Aluguel">Aluguel</option>
+                                    <option value="Energia">Energia</option>
+                                    <option value="Água">Água</option>
+                                    <option value="Internet">Internet</option>
+                                    <option value="Outros">Outros</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label">Descrição *</label>
+                                <input type="text" class="form-control bg-dark text-white" id="financeiroDescricao" required="">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Valor (R$) *</label>
+                                <input type="number" class="form-control bg-dark text-white" id="financeiroValor" step="0.01" min="0" required="">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Forma de Pagamento *</label>
+                                <select class="form-control bg-dark text-white" id="financeiroFormaPagamento" required="">
+                                    <option value="">Selecione...</option>
+                                    <option value="Dinheiro">Dinheiro</option>
+                                    <option value="PIX">PIX</option>
+                                    <option value="Cartão Débito">Cartão Débito</option>
+                                    <option value="Cartão Crédito">Cartão Crédito</option>
+                                    <option value="Boleto">Boleto</option>
+                                    <option value="Transferência">Transferência</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Data *</label>
+                                <input type="date" class="form-control bg-dark text-white" id="financeiroData" required="">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label">Status *</label>
+                                <select class="form-control bg-dark text-white" id="financeiroStatus" required="">
+                                    <option value="Pendente">Pendente</option>
+                                    <option value="Recebido">Recebido</option>
+                                    <option value="Pago">Pago</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-end">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-warning">
+                                <i class="fas fa-save"></i> Salvar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="./VOLMASTER - Plataforma de Gestão de Oficina_files/jquery-3.6.0.min.js.baixados"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="./VOLMASTER - Plataforma de Gestão de Oficina_files/bootstrap.bundle.min.js.baixados"></script>
+    
+    <!-- Data Manager -->
+    <script src="./VOLMASTER - Plataforma de Gestão de Oficina_files/data-manager.js"></script>
+    
+    <!-- UI Manager -->
+    <script src="./VOLMASTER - Plataforma de Gestão de Oficina_files/ui-manager.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="./VOLMASTER - Plataforma de Gestão de Oficina_files/script.js"></script>
+
+
+</body></html>

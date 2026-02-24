@@ -2,21 +2,21 @@
 
 ## 📋 Descrição
 
-Volmaster Tech é um website moderno e interativo apresentando produtos e serviços de diagnóstico e otimização para caminhões. O projeto inclui uma página inicial com carousel de **20 produtos**, catálogo completo e página de contatos totalmente funcional.
+Volmaster Tech é um website moderno e interativo apresentando **cursos de treinamento e capacitação** para manutenção e diagnóstico de caminhões. O projeto inclui uma página inicial com carousel de **20 cursos**, catálogo completo e página de contatos totalmente funcional.
 
 ## ✨ Características Principais
 
-- **Carousel com 20 Slides**: Exibe todos os produtos do projeto
-- **Cores**: Preto/Branco/Amarelo (#FFD700) com efeitos de brilho
-- **Logo**: "Volmaster" em branco e "Tech" em amarelo
-- **Animações**: Transições suaves com efeitos de fade e slide
-- **Responsivo**: Adaptável para mobile, tablet e desktop
-- **Interativo**: Navegação por setas, clique nos indicadores, auto-play
+- **Carousel Interativo com 20 Slides**: Exibe todos os cursos de treinamento do projeto
+- **Cores Profissionais**: Preto/Branco/Amarelo (#FFD700) com efeitos de brilho
+- **Identidade Visual**: "Volmaster" em branco e "Tech" em amarelo dourado
+- **Animações Suaves**: Transições elegantes com efeitos de fade e slide
+- **Design Responsivo**: Totalmente adaptável para mobile, tablet e desktop
+- **Navegação Intuitiva**: Setas, indicadores clicáveis e auto-play
 
 ## 📄 Páginas Disponíveis
 
 ### 1. **Home (index.html)**
-✅ Carousel interativo com 20 produtos
+✅ Carousel interativo com 20 cursos de treinamento
 ✅ Navegação com setas (anterior/próximo)
 ✅ Indicadores dinâmicos de slides (gerados automaticamente)
 ✅ Auto-play a cada 5 segundos
@@ -25,82 +25,75 @@ Volmaster Tech é um website moderno e interativo apresentando produtos e servi�
 ✅ Numeração do slide atual (01-20)
 
 ### 2. **Produtos (produtos.html)**
-✅ Grid responsivo com todos os 20 produtos
+✅ Grid responsivo com todos os 20 cursos
 ✅ Cards com hover effects (escala, brilho, cor)
 ✅ Imagens de alta qualidade
-✅ Descrição de cada produto
-✅ Botão "Saiba Mais" em cada card
+✅ Descrição de cada curso
+✅ Botão "Saiba Mais" em cada card com link direto para WhatsApp
 
 ### 3. **Contatos (contatos.html)**
 ✅ Formulário de contato funcional
 ✅ Campos: Nome, Email, Telefone, Assunto, Mensagem
 ✅ Validação de formulário
-✅ Informações de contato completas
+✅ Informações de contato completas (endereço, telefone, email)
 ✅ Horário de atendimento
-✅ Links para redes sociais
-✅ Mapa de localização (estrutura pronta)
-
-### 4. **Página de Índice (start.html)**
-✅ Página inicial para acessar todas as seções
-✅ Lista de todos os 20 produtos
-✅ Links de navegação rápida
+✅ Links para redes sociais (YouTube, Instagram, Facebook)
+✅ Botão flutuante do WhatsApp em todas as páginas
 
 ## 📁 Estrutura de Arquivos
 
 ```
-volmaster/
-├── index.html           # Página inicial com carousel (20 slides)
-├── produtos.html        # Catálogo de produtos com grid
-├── contatos.html        # Página de contatos com formulário
-├── start.html          # Página de índice/dashboard
-├── styles.css          # Estilos globais (720 linhas)
-├── scripts.js          # JavaScript funcional (105 linhas)
-├── README.md           # Esta documentação
-└── volmaster/          # Pasta com 20 imagens dos produtos
-    ├── MOTOR D13K EURO 6.jpeg
-    ├── Motor D8K VM VM EURO 6.jpeg
+volmaster-agenda/
+├── index.html              # Página inicial com carousel (20 slides)
+├── produtos.html           # Catálogo de cursos com grid responsivo
+├── contatos.html           # Página de contatos com formulário
+├── styles.css              # Estilos globais (1000+ linhas)
+├── scripts.js              # JavaScript funcional (200 linhas)
+├── README.md               # Esta documentação
+└── volmaster/              # Pasta com imagens dos cursos
     ├── Diagnostico completo do FH4 EURO 6.jpeg
-    ├── Diagnostico avançado Volvo.jpeg
+    ├── MOTOR D13K EURO 6.jpeg
+    ├── ELETRICIDADE E ELETRÔNICA DO FH CLÁSSICO 30 de março.jpg
     ├── ELETRICIDADE E ELETRONICA DO FH CLASSICO.jpeg
-    ├── Eletricidade E Eletronica FH4 Euro 6.jpeg
-    ├── ELETRICIDADE E ELETRONICA SCANIA SUPER EURO 6.jpeg
-    ├── ELETRICIDADE E ELETRONICA VM EURO 6.jpeg
-    ├── ELETRICIDADE E ELETRONICA FH4 EURO 5.jpeg
-    ├── CAIXA VT COM CAIXA I-SHIFT C E D.jpeg
     ├── CAIXA I-SHIFT VERSÃO F E G.jpeg
-    ├── SISTEMA PNEUMÁTICO.jpeg
-    ├── SISTEMA DE PÓS TRATAMENTO DOS GASES EURO 5 EURO 6 E VM.jpeg
-    ├── PARAMETROS AVANÃDOS VOLVO.jpeg
-    ├── Moto D13A e D13C.jpeg
-    ├── MOTOR SCANICA SUPER EURO 6.jpeg
+    ├── ELETRICIDADE E ELETRONICA VM EURO 6.jpeg
+    ├── MOTOR D8K VM VM EURO 6.jpeg
     ├── MOTOR SCANIA SUPER EURO6 16 A 19 DE JUNHO.jpg
-    ├── ELETRICIDADE E ELETRÔNICA DO FH CLÁSSICO.jpg
+    ├── SISTEMA DE PÓS TRATAMENTO DOS GASES EURO 5 EURO 6 E VM.jpeg
+    ├── Diagnostico avançado Volvo.jpeg
+    ├── ELETRICIDADE E ELETRONICA SCANIA SUPER EURO 6.jpeg
+    ├── ELETRICIDADE E ELETRÔNICA FH4 EURO 5.jpeg
+    ├── Eletricidade E Eletronica FH4 Euro 6.jpeg
+    ├── CAIXA VT COM CAIXA I-SHIFT C E D.jpeg
+    ├── SISTEMA PNEUMÁTICO.jpeg
+    ├── PARAMETROS AVANÃDOS VOLVO.jpeg
+    ├── MOTOR D13A E D13C.jpeg
     ├── Winols.jpeg
     └── Winols Edição de Arquivos Scania S8.jpeg
 ```
 
-## 🎯 Todos os 20 Produtos
+## 🎯 Todos os 20 Cursos/Produtos
 
-1. **Motor D13K EURO 6** - Motor Volvo
-2. **Motor D8K VM EURO 6** - Motor VM
-3. **Diagnóstico FH4 EURO 6** - Diagnóstico Avançado
-4. **Diagnóstico Avançado Volvo** - Análise Profunda
-5. **Eletrônica FH Clássico** - Sistemas Elétricos
-6. **Eletrônica FH4 EURO 6** - Eletrônica Moderna
-7. **Eletrônica Scania SUPER EURO 6** - Scania Super
-8. **Eletrônica VM EURO 6** - Eletrônica VM
-9. **Eletrônica FH4 EURO 5** - EURO 5
-10. **Caixa VT com I-SHIFT C e D** - Transmissão
-11. **Caixa I-SHIFT Versão F e G** - I-SHIFT Moderna
-12. **Sistema Pneumático** - Pneumática
-13. **Pós-tratamento de Gases** - Pós-Tratamento
-14. **Parâmetros Avançados Volvo** - Otimização
-15. **Motor D13A e D13C** - Motor Clássico
-16. **Motor Scania SUPER EURO 6** - Motor Scania
-17. **Winols - Edição de Arquivos** - Software
-18. **Winols Scania S8** - Software Scania
-19. **Motor Scania Super EURO 6** - Curso completo de motor Scania
-20. **Eletricidade e Eletrônica do FH Clássico** - Treinamento elétrico FH
+1. **Diagnóstico Completo do FH4 EURO 6** - 03 a 06 de Março
+2. **Motor D13K EURO 6** - 26 a 29 de Maio
+3. **Eletricidade e Eletrônica do FH Clássico** - 30 de Março a 02 de Abril
+4. **Eletricidade e Eletrônica do FH Clássico** - 31 de Março a 03 de Abril
+5. **Caixa I-SHIFT Versão F e G** - 07 a 10 de Abril
+6. **Eletricidade e Eletrônica VM EURO 6** - 28 de Abril a 01 de Maio
+7. **Motor D8K VM EURO 6** - 09 a 12 de Junho
+8. **Motor Scania Super EURO 6** - 16 a 19 de Junho
+9. **Sistema de Pós Tratamento dos Gases (EURO 5 / EURO 6 / VM)** - 23 a 26 de Junho
+10. **Diagnóstico Avançado Volvo** - 30 de Junho a 03 de Julho
+11. **Eletricidade e Eletrônica Scania Super EURO 6** - 07 a 10 de Julho
+12. **Eletricidade e Eletrônica FH4 EURO 5** - 14 a 17 de Julho
+13. **Eletricidade e Eletrônica FH4 EURO 6** - 21 a 24 de Julho
+14. **Caixa VT com Caixa I-SHIFT C e D** - 28 a 31 de Julho
+15. **Sistema Pneumático** - 04 a 07 de Agosto
+16. **Parâmetros Avançados Volvo** - 11 a 14 de Agosto
+17. **Motor D13A e D13C** - 18 a 21 de Agosto
+18. **Winols - Edição de Arquivos** - 25 a 28 de Agosto
+19. **Winols - Edição de Arquivos Scania S8** - 01 a 04 de Setembro
+20. **Motor Scania Super EURO 6** - 08 a 11 de Setembro
 
 ## 🎨 Paleta de Cores
 
@@ -154,26 +147,35 @@ O projeto possui breakpoints em 3 principais resoluções:
 
 ## 🚀 Como Usar
 
-### Opção 1: Abrir arquivo local
-1. Navegue até: `c:\Users\Techtool\Desktop\Nova pasta\new project\volmaster\`
-2. Clique duplo em `start.html` para abrir no navegador
-3. Clique em "Home" para acessar o carousel
+### Opção 1: Abrir arquivo local (desenvolvimento)
+1. Navegue até a pasta do projeto
+2. Clique duplo em `index.html` para abrir no navegador
+3. Use a navegação do menu para acessar outras páginas
 
-### Opção 2: Usar um servidor local
+### Opção 2: Usar um servidor local (recomendado)
 ```bash
-# Usar Python 3
+# Python 3
 python -m http.server 8000
 
-# Ou usar Node.js (com http-server instalado)
-http-server
+# Node.js (com http-server instalado)
+npx http-server
+
+# PHP
+php -S localhost:8000
 ```
-Depois acesse: `http://localhost:8000/volmaster/`
+Depois acesse: `http://localhost:8000/`
+
+### Opção 3: Hospedar online
+- **GitHub Pages**: Gratuito, ideal para sites estáticos
+- **Netlify**: Deploy automático, domínio personalizado
+- **Vercel**: Deploy rápido, ótima performance
+- **Hospedagem tradicional**: Upload via FTP
 
 ### Navegação no Carousel
-- **Setas**: Clique em < ou > para navegar
-- **Dots**: Clique nos indicadores para ir direto ao slide
+- **Setas**: Clique em < ou > para navegar entre cursos
+- **Dots**: Clique nos indicadores para ir direto ao curso desejado
 - **Auto-play**: O carousel avança automaticamente a cada 5 segundos
-- **Número**: Veja qual slide você está visualizando (01-20)
+- **Número**: Veja qual curso está visualizando (01-20)
 
 ## 💻 Tecnologias Utilizadas
 
@@ -198,41 +200,47 @@ Depois acesse: `http://localhost:8000/volmaster/`
   - Manipulação de eventos
   - Formulário de contatos
 
-## 🔄 Atualizações Realizadas (v3)
+## 🔄 Atualizações Realizadas (v4 - Fevereiro 2026)
 
-✅ HTML completo com 20 produtos
-✅ JavaScript refatorado com geração dinâmica de dots
-✅ Suporte para carousel com múltiplos slides
-✅ Responsividade melhorada para mobile
-✅ Indicadores de slides com scroll
-✅ Página de índice (start.html)
-✅ Footer em todas as páginas
-✅ Animações suaves
-✅ Validação de formulário
-✅ Layout grid responsivo
+✅ **20 cursos completos** adicionados ao carousel e grid de produtos
+✅ HTML estruturado com todos os cursos
+✅ JavaScript refatorado com geração dinâmica de indicadores
+✅ Suporte completo para carousel com 20 slides
+✅ Responsividade otimizada para todos os dispositivos
+✅ Indicadores de slides com navegação direta
+✅ Footer consistente em todas as páginas
+✅ Animações suaves e profissionais
+✅ Validação de formulário de contato
+✅ Layout grid responsivo (3 colunas desktop, 2 tablet, 1 mobile)
+✅ Botão flutuante WhatsApp em todas as páginas
+✅ Links diretos para WhatsApp em cada curso
+✅ Integração com redes sociais (YouTube, Instagram, Facebook)
 
 ## 🎯 Próximas Melhorias (Opcional)
 
-- [ ] Backend para processar formulário de contatos
-- [ ] Galeria de imagens dos produtos
-- [ ] Filtros de categoria na página de produtos
-- [ ] Chat em tempo real
-- [ ] Sistema de avaliações
-- [ ] Blog de notícias
-- [ ] Integração com redes sociais
+- [ ] Sistema de inscrição online para cursos
+- [ ] Área do aluno com login
+- [ ] Calendário interativo com datas dos cursos
+- [ ] Sistema de pagamento online
+- [ ] Certificados digitais
+- [ ] Galeria de fotos dos treinamentos
+- [ ] Depoimentos de alunos
+- [ ] Blog com artigos técnicos
+- [ ] Newsletter para novidades
 
 ## 📞 Suporte
 
 Para qualquer dúvida ou problema:
-1. Verifique se todas as imagens estão na pasta `volmaster/volmaster/`
+1. Verifique se todas as imagens estão na pasta `volmaster/`
 2. Certifique-se de que o navegador está atualizado
 3. Limpe o cache do navegador (Ctrl + F5)
 4. Abra o console do navegador (F12) para verificar erros
+5. Entre em contato pelo WhatsApp: +55 62 9329-0519 (Suziane)
 
 ---
 
 **Volmaster Tech © 2026** - Todos os direitos reservados
 
-**Versão**: 3.0 - Carousel com 20 Produtos
-**Última Atualização**: 23 de fevereiro de 2026
-**Desenvolvido para**: Máxima Performance e Interatividade
+**Versão**: 4.0 - 20 Cursos Completos
+**Última Atualização**: 24 de fevereiro de 2026
+**Desenvolvido para**: Máxima Performance, Responsividade e Conversão
