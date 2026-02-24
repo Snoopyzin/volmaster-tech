@@ -1,0 +1,28 @@
+# robots.txt - Volmaster Tech
+# Instruções para rastreadores de busca (Google, Bing, etc.)
+
+# Permitir todos os rastreadores em todo o site
+User-agent: *
+Allow: /
+
+# Páginas importantes para indexação prioritária
+Sitemap: https://volmastertech.com.br/sitemap.xml
+
+# Arquivos e pastas que NÃO devem ser indexados
+Disallow: /vmt/
+Disallow: /start.html
+Disallow: /summary.html
+Disallow: /*.tmp$
+Disallow: /*.log$
+
+# Rastreamento específico para imagens
+User-agent: Googlebot-Image
+Allow: /volmaster/*.jpeg
+Allow: /volmaster/*.jpg
+Allow: /volmaster/*.png
+
+# Tempo de espera entre requisições (em segundos)
+Crawl-delay: 1
+
+# Informações de contato
+# Contact: vendas.volmastertech@gmail.com

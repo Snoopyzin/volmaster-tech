@@ -8,19 +8,17 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 ## [4.0.0] - 2026-02-24
 
 ### ✨ Adicionado
-- **20 cursos completos** no carousel e página de produtos
-- 11 novos cursos adicionados:
-  - Diagnóstico Avançado Volvo
-  - Eletricidade e Eletrônica Scania Super EURO 6
-  - Eletricidade e Eletrônica FH4 EURO 5
-  - Eletricidade e Eletrônica FH4 EURO 6
-  - Caixa VT com Caixa I-SHIFT C e D
-  - Sistema Pneumático
-  - Parâmetros Avançados Volvo
-  - Motor D13A e D13C
-  - Winols - Edição de Arquivos
-  - Winols - Edição de Arquivos Scania S8
-  - Motor Scania Super EURO 6 (versão adicional)
+- **9 cursos completos** no carousel e página de produtos
+- Listagem completa dos cursos programados para 2026:
+  1. Diagnóstico Completo do FH4 EURO 6 (03 a 06 de março)
+  2. Motor D13K EURO 6 (17 a 20 de março)
+  3. Eletricidade e Eletrônica do FH Clássico (30 de março a 02 de abril)
+  4. Eletricidade e Eletrônica do FH Clássico - segunda turma (31 de março a 03 de abril)
+  5. Caixa I-SHIFT Versão F e G (07 a 10 de abril)
+  6. Eletricidade e Eletrônica VM EURO 6 (28 de abril a 01 de maio)
+  7. Motor D8K VM EURO 6 (09 a 12 de junho)
+  8. Motor Scania Super EURO 6 (16 a 19 de junho)
+  9. Sistema de Pós Tratamento dos Gases (23 a 26 de junho)
 - Arquivo `.gitignore` configurado
 - Arquivo `LICENSE` (MIT)
 - Arquivo `CONTRIBUTING.md` com guia de contribuição
@@ -28,16 +26,16 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 - Arquivo `CHANGELOG.md` (este arquivo)
 
 ### 🔄 Modificado
-- README.md atualizado com informações corretas dos 20 cursos
-- Descrições dos produtos/cursos melhoradas
+- README.md atualizado com informações corretas dos 9 cursos
+- Descrições dos cursos melhoradas e organizadas por ordem cronológica
 - Datas dos cursos atualizadas para 2026
 - Estrutura de pastas documentada no README
 - Instruções de uso melhoradas
 
 ### 🐛 Corrigido
-- Inconsistência entre README (dizia 20 produtos) e HTML (tinha apenas 9)
 - Links do WhatsApp padronizados em todos os cursos
-- Nomenclatura: produtos → cursos (mais adequado)
+- Nomenclatura ajustada para melhor compreensão
+- Imagem do Motor D13K corrigida para "motor d13K euro 6.jpeg"
 
 ---
 
@@ -113,11 +111,11 @@ e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
 ## 📊 Estatísticas
 
-- **Total de cursos**: 20
+- **Total de cursos**: 9
 - **Páginas**: 3 principais (Home, Produtos, Contatos)
 - **Linhas de código CSS**: ~1000+
 - **Linhas de código JS**: ~200
-- **Imagens**: 20 (cursos)
+- **Imagens**: 9 (cursos)
 
 ---
 
